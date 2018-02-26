@@ -1,5 +1,5 @@
 # 2StageCoagAddition
-Add coagulant into the system from to different spot instead of all at once in order to save the coagulant.
+Two Stage Coagulant Addition team was designing and fabricating an apparatus that was used to experiment the benefit of having two stage coagulant addition, in opposition to one, while maintaining an efficient effluent turbidity. "Two stage" stood for adding clean coagulant after all previously added coagulant was fully covered by humic acid, which was the experimental substitution of NOM in the water. As a new sub-team, apparatus and experimental procedures had to be designed and fabricated from scratch. The research was  based on Yingda's thesis, who studied the effect of humic acid on the coagulant dosing model. Based on the bonding mechanism, it could be hypothesized that two stage coagulant addition would increase the removal efficiency of particles.
 
 Members:
 Yuhao Du 
