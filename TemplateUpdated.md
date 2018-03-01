@@ -1,16 +1,19 @@
-# AguaClara Research Report & Manual Template
+#  
 #### Natalie Mottl, William Pennock, Janak Shah, and Jillian Whiting
 #### February 20, 2018
 
 # Template Description
 This template will lay out all possible sections that could be used for a research report and manual. All research reports and manuals should strive to comply with this template, but every team will use different parts. In order to use this template, copy this file from the AguaClara team resources repository to your team's repository, and rename it for your team in a format similar to  "[Team Name] [Semester]". An example would be "Filter and Treatment Train Flow Control Spring 2017." For additional information on all the possibilities in markdown files, refer to the AguaClara Interactive Tutorial and the AguaClara Tutorial training pages. After you complete that step, please delete this description and everything above this.
 
-# Team Name, Semester Year
-#### Authors
-#### Date
+# 2 stage coagulant addition, Spring 2018
+#### Barbara Oramah， Ching Pang， Yuhao Du
+#### March 1, 2018
 
 ## Abstract
-Briefly summarize your previous work, goals and objectives, what you have accomplished, and future work. (100 words max)
+previous work: Last semester, our group design and fabricate 
+goals & objectives: This semseter, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
+what you have accomplished: Up to now we have completed the literature review, and working on apparatus set up, 
+and future work:
 
 ## Introduction
 Explain how the completion of your challenge will affect AguaClara and the mission of providing safe drinking water (or sustainable wastewater treatment!). If this is a continuing team, how will your contribution build upon previous research? What needs to be further discovered or defined? If this is a new team, what prompted the inclusion of this team?
