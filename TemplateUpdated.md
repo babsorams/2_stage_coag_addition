@@ -10,10 +10,10 @@ This template will lay out all possible sections that could be used for a resear
 #### March 1, 2018
 
 ## Abstract
-previous work: Last semester, our group design and fabricate 
+previous work: Last semester, our group designed and fabricated the experiment apparatus and conducted experiment for both 1 stage and 2 stages coagulant addition. Our data it not enough to come up with a grand conclusion, but the data we generated suggest that there might be trade-off when we switch from 1 stage to 2 stages. Besides, we also made some simplification to our system.
 goals & objectives: This semseter, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
-what you have accomplished: Up to now we have completed the literature review, and working on apparatus set up, 
-and future work:
+what you have accomplished: Up to now we have completed the literature review, and working on apparatus set up.
+and future work: We have encountered several problem: the high pressure within the system, leak caused by the poor conection. In next few weeks, we would fix those problem and begin to conduct our experiment.
 
 ## Introduction
 Explain how the completion of your challenge will affect AguaClara and the mission of providing safe drinking water (or sustainable wastewater treatment!). If this is a continuing team, how will your contribution build upon previous research? What needs to be further discovered or defined? If this is a new team, what prompted the inclusion of this team?
