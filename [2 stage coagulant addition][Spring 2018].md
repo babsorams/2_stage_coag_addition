@@ -106,8 +106,11 @@ Use this section to explain your method file. This could be broken up into sever
 Here, you should describe the function of each state in your method file, both in terms of its overall purpose and also in terms of the details that make it distinct from other states. For example:
 \begin{itemize}
 \item \underline{OFF} - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
-\end{itemize}
 
+\item \underline{OFF} - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
+\item \underline{ON} - ON state of ProCoDa. All sensors, relays, and pumps are turned on.
+\item \underline{Data Acquisition} - State 3 of the experimental process where the coagulant pump is working and the increment function would increase its value each time when we switch to this state. The data acquisition state usually set to be 2 hours, which is enough for the floc blanket to form.
+\end{itemize}
 ### Set Points
 Here, you should list the set points used in your method file and explain their use as well as how each was calculated.
 
