@@ -17,3 +17,4 @@ This semseter, we will try to close the debate of 1 stage vs 2 stage, come up wi
 
 ## Report
 https://docs.google.com/document/d/1bpMesfzBkrqg5eKsiYEZuJmXO1avq_sC3mDl2_O8qiM/edit
+https://www.overleaf.com/10949551ntrnbpyktgnw#/41213280/
