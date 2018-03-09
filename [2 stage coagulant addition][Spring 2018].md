@@ -5,9 +5,14 @@
 
 ## Abstract
 previous work: Last semester, our group designed and fabricated the experiment apparatus and conducted experiment for both 1 stage and 2 stages coagulant addition. Our data it not enough to come up with a grand conclusion, but the data we generated suggest that there might be trade-off when we switch from 1 stage to 2 stages. Besides, we also made some simplification to our system.
+
+
 goals & objectives: This semester, our group focused on comparing 1 stage addition with 2 stage addition and carrying on the experiment with different influent turbidities, coagulant dosage and HumicAcid concentration,as well as trying to improve Yingda's coagulant dosage model. Besides, more insight on the particles bond mechanism, flocculation, and geometry of the contact chambers were needed. Eventually, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
+
+
 what you have accomplished: Up to now we have completed the literature review, and working on apparatus set up.
 and future work: We have encountered several problem: the high pressure within the system, leak caused by the poor conection. In next few weeks, we would fix those problem and begin to conduct our experiment.
+
 
 The research was  based on Yingda's thesis, who studied the effect of humic acid on the coagulant dosing model. Based on the bonding mechanism, it could be hypothesized that two stage coagulant addition would increase the removal efficiency of particles while maintain the coagulant dosage. 
 
