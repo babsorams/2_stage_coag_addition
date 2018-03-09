@@ -5,12 +5,19 @@
 
 ## Abstract
 previous work: Last semester, our group designed and fabricated the experiment apparatus and conducted experiment for both 1 stage and 2 stages coagulant addition. Our data it not enough to come up with a grand conclusion, but the data we generated suggest that there might be trade-off when we switch from 1 stage to 2 stages. Besides, we also made some simplification to our system.
-goals & objectives: This semseter, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
+goals & objectives: This semester, our group focused on comparing 1 stage addition with 2 stage addition and carrying on the experiment with different influent turbidities, coagulant dosage and HumicAcid concentration,as well as trying to improve Yingda's coagulant dosage model. Besides, more insight on the particles bond mechanism, flocculation, and geometry of the contact chambers were needed. Eventually, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
 what you have accomplished: Up to now we have completed the literature review, and working on apparatus set up.
 and future work: We have encountered several problem: the high pressure within the system, leak caused by the poor conection. In next few weeks, we would fix those problem and begin to conduct our experiment.
 
+The research was  based on Yingda's thesis, who studied the effect of humic acid on the coagulant dosing model. Based on the bonding mechanism, it could be hypothesized that two stage coagulant addition would increase the removal efficiency of particles while maintain the coagulant dosage. 
+
 ## Introduction
-Explain how the completion of your challenge will affect AguaClara and the mission of providing safe drinking water (or sustainable wastewater treatment!). If this is a continuing team, how will your contribution build upon previous research? What needs to be further discovered or defined? If this is a new team, what prompted the inclusion of this team?
+
+We have to understand the physical and chemical process in flocculation before we can optimal our water treatment process, thus a predictive model which can describe the flocculation process is needed. However, in the past research of AguaClara project team, the model we biult only consider the clay and coagulant in the system, it is kind of useless in engineering appllication because NOM can be found in nearly every surface water resources and some of the groud water resources and the presence of NOM can create a need for increased coagulant doses in drinking water treatment.
+
+So we have to extend the model base on our past research, take the effect of NOM on flocculation into consideration. After study the bond mechanism between clay, humic acid and coagulant, we came up with an assumption that we could add the coagulant separately to save coagulant, because it was assumed that after stage 1, all coagulant would be coated by humic acid, thus the coagulant adds in stage 2 could merely function as an agglomerant then achieved better performance in flocculation process and the aggregation process. After we have the model, we can try to optimal our water treatment process, for example, use the coagulant more efficiently and cut down the operational cost. AguaClara is a engineering project team, so cost is always our concern. 
+
+
 
 ## Literature Review and Previous Work
 Discuss what is already known about your research area based on both external work and that of past AguaClara Teams. Connect your objectives with what is already known and explain what additional contribution you intend to make. Make sure to add APA formatted in-text citations. If you mention the author(s) in your sentence, you can simply give the year of publication.[(Logan et. al. 1987)](http://www.jstor.org/stable/pdf/25043431.pdf?acceptTC=true)
