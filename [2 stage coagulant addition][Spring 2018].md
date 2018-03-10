@@ -184,32 +184,17 @@ Include any information related to the fabrication of equipment, experimental ap
  **Step 1.** Turn off the clay and coagulant pump while let the tap water pump run at a relative high speed.
 
 **Step 2.** Remove entire apparatus from wall (recirculator \& tube settler) and throughly wash it out, then reattach it back to the wall
-\item Wash out the Flocculator by unplugging the connection between the the outflow tube from the influent turbidimeter and the flocculator, and plug in tubing from the nearby sink to wash out the flocculator. Make sure there is a bucket at the end of the flocculator that will collect the water.
-\item Clean the influent and effluent turbidimeter. Make sure to turn on the Bypass channel first! First, open the bypass valve. Second, pinch the black outflow tube. Third, close the inflow valve.
-\item Remove and wash out the vials from both turbidimeters. Refill the vials with clean water, then put back into the turbidimeters.Use Kim wipes to clean the glass throughly.
-\item Turn off water to the flocculator and detach the tubing. Hook up the influent turbidimeter back into flocculator then re-open the influent turbidimeter BUT keep the effluent turbidity meter closed. Turn on the water pump to clean out the influent turbidimeter as well as the flocculator.
-\item Pour out the coagulant reservoir into a different bucket and rinse reservoir with deionized water to make sure all residue is washed out. Take out the push pin then wash out the coagulant reservoir throughly. Replenish reservoir with 5L (or less) of deionized water. Use MathCAD to determine how much 70.9mg/L PAC coagulant needed to use to get the desired results for the experiment.
-\item Replenish the Clay stock. Generally add 2 caps of clay for every 1 Liter of water added. However, this can change depending on how your clay pump is dosing and NTU response. Once the experiment is done, we want to completely wash out the apparatus so it will be ready for the next experiment.
-\item Close the red wastewater valve
-\item Place bucket under recirculator, then unplug the inlet tube from the bottom of recirculator, and unplug the connection between the top of the tube settler to the inlet tube for the effluent turbidimeter
-\item Drain out the floc weir
-\item Remove entire apparatus from wall (recirculator \& tube settler) and throughly wash it out, then reattach it back to the wall
-\item Wash out the Flocculator by unplugging the connection between the the outflow tube from the influent turbidimeter and the flocculator, and plug in tubing from the nearby sink to wash out the flocculator. Make sure there is a bucket at the end of the flocculator that will collect the water.
-\item Clean the influent and effluent turbidimeter. Make sure to turn on the Bypass channel first! First, open the bypass valve. Second, pinch the black outflow tube. Third, close the inflow valve.
-\item Remove and wash out the vials from both turbidimeters. Refill the vials with clean water, then put back into the turbidimeters.Use Kim wipes to clean the glass throughly.
-\item Turn off water to the flocculator and detach the tubing. Hook up the influent turbidimeter back into flocculator then re-open the influent turbidimeter BUT keep the effluent turbidity meter closed. Turn on the water pump to clean out the influent turbidimeter as well as the flocculator.
-\item Pour out the coagulant reservoir into a different bucket and rinse reservoir with deionized water to make sure all residue is washed out. Take out the push pin then wash out the coagulant reservoir throughly. Replenish reservoir with 5L (or less) of deionized water. Use MathCAD to determine how much 70.9mg/L PAC coagulant needed to use to get the desired results for the experiment.
-\item Replenish the Clay stock. Generally add 2 caps of clay for every 1 Liter of water added. However, this can change depending on how your clay pump is dosing and NTU response. Once the experiment is done, we want to completely wash out the apparatus so it will be ready for the next experiment.
-\item Close the red wastewater valve
-\item Place bucket under recirculator, then unplug the inlet tube from the bottom of recirculator, and unplug the connection between the top of the tube settler to the inlet tube for the effluent turbidimeter
-\item Drain out the floc weir
-\item Remove entire apparatus from wall (recirculator \& tube settler) and throughly wash it out, then reattach it back to the wall
-\item Wash out the Flocculator by unplugging the connection between the the outflow tube from the influent turbidimeter and the flocculator, and plug in tubing from the nearby sink to wash out the flocculator. Make sure there is a bucket at the end of the flocculator that will collect the water.
-\item Clean the influent and effluent turbidimeter. Make sure to turn on the Bypass channel first! First, open the bypass valve. Second, pinch the black outflow tube. Third, close the inflow valve.
-\item Remove and wash out the vials from both turbidimeters. Refill the vials with clean water, then put back into the turbidimeters.Use Kim wipes to clean the glass throughly.
-\item Turn off water to the flocculator and detach the tubing. Hook up the influent turbidimeter back into flocculator then re-open the influent turbidimeter BUT keep the effluent turbidity meter closed. Turn on the water pump to clean out the influent turbidimeter as well as the flocculator.
-\item Pour out the coagulant reservoir into a different bucket and rinse reservoir with deionized water to make sure all residue is washed out. Take out the push pin then wash out the coagulant reservoir throughly. Replenish reservoir with 5L (or less) of deionized water. Use MathCAD to determine how much 70.9mg/L PAC coagulant needed to use to get the desired results for the experiment.
-\item Replenish the Clay stock. Generally add 2 caps of clay for every 1 Liter of water added. However, this can change depending on how your clay pump is dosing and NTU response.
+
+**Step 3.** Wash out the Flocculator by unplugging the connection between the the outflow tube from the influent turbidimeter and the flocculator, and plug in tubing from the nearby sink to wash out the flocculator. Make sure there is a bucket at the end of the flocculator that will collect the water.
+
+**Step 4.** Clean the influent and effluent turbidimeter. Make sure to turn on the Bypass channel first! First, open the bypass valve. Second, pinch the black outflow tube. Third, close the inflow valve.
+
+**Step 5.** Remove and wash out the vials from both turbidimeters. Refill the vials with clean water, then put back into the turbidimeters.Use Kim wipes to clean the glass throughly.
+
+**Step 6.** Turn off water to the flocculator and detach the tubing. Hook up the influent turbidimeter back into flocculator then re-open the influent turbidimeter BUT keep the effluent turbidity meter closed. Turn on the water pump to clean out the influent turbidimeter as well as the flocculator.
+
+**Step 7.** Pour out the coagulant reservoir into a different bucket and rinse reservoir with deionized water to make sure all residue is washed out. Take out the push pin then wash out the coagulant reservoir throughly. Replenish reservoir with 5L (or less) of deionized water. Use MathCAD to determine how much 70.9mg/L PAC coagulant needed to use to get the desired results for the experiment.
+
 ## Experimental Checklist
 Another potential section could include a list of things that you need to check before running an experiment.
 
