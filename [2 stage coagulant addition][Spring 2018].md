@@ -46,12 +46,20 @@ Based on Yingda's Thesis, the presence of humic acid as NOM affects the use of P
 
 
 ## Methods
+
 Explain the techniques you have used to acquire additional data and insights. Reserve fine detail for the Manual at the end of the report, but use this section to give an overview with enough detail for the reader to understand your Results and Analysis. Describe your apparatus, and have a justification for every decision you made and every parameter you chose in the design of the apparatus. Be especially careful to detail the conditions your experiments were conducted under, as this information is especially important for interpreting your results
 
 Below, some example sections are given. Sectioning the report is meant to keep similar information together.  Continue making sections as necessary, or delete sections if you do not need them. Feel free to add subsubsections to further delineate the information. For example, under the Experimental Apparatus section below, the EStaRS team might consider having sections such as "Filter Design" and "Filter Fabrication".
 
+### Experimental Design
+
+In our experiment, there should be two contact chambers before the fluid entered the flocculator,they are place for coagulant to collide with particles in the water. Originally, We designed the pump to input the correct coagulant dosage before each contact chamber, allowing the two stage coagulant addition. However, the ProCoDA system we used had its limit, the maximum number of pump it could control was 2, so there had to be one coagulant pump under manual control. So we changed the design, we used the second pump to drain from the first pump when we ran the two stages addition experiment. 
+
+Finally, we decided to carry out the following procedure. The humic acid would be a fixed variable and the turbidity and the coagulant dosage would vary. Firstly, a set of one stage coagulant addition experiments was carried out while we kept the second coagulant pump closed. The goal of this set of experiment was finding the coagulant dosage which could reduce the effluent turbidity to 3 NTU or less, which was the value that AguaClara filter system requires. After that, the dosage used in that first experiment (1 stage addition) was divided into two parts, where we would find the perfect distribution, at that point most of the coagulant from the first coagulant pump would be used to absorb the humic acid in the system, and coagulant adds by the second pump would only work on lowering the turbidity to be able to attach to every particle in the system to its surface. In order to do this, we installed a T-connection between the two coagulant pumps. This helped us manage the amount of coagulant that was put into the system. The idea behind this was that the first pump would control the total amount of coagulant being put into the system. When the second coagulant pump was open, it would be able to control how much coagulant would be used for the second dosage, drain directly from the first valve, so we could maintain a fixed dosage of the total amount of coagulant put in. This helped us test whether or not having a second dosage of coagulant before the second contact chamber would make the experiment perform better than the total amount of coagulant dosage in one stage. 
+
+
 ### Experimental Apparatus
-Explain your apparatus setup using enough detail such that future teams can recreate your apparatus. Make sure to explain why you built it this way.
+
 * Design (calculations, constraints)
 The ProCoDA system can only control two pumps, and one of the coagulant pump had to be connected to the system, so we could not add humic acid and clay separately like some of other groups in the lab. 
 
@@ -172,6 +180,7 @@ We also ran a one stage experiment with the increment function varying the chemi
 * **Did these results line up with expectations?**
 
 In this semster, up to now, we only did several trials of one stage addition. Our expectation for the one stage addtion is that the floc blanket can be found in our sedimentation tank and the effluent go down to a level that is desirable for the AguaClara filtration system. The effluent turbidity in several trials happened to be around 20NTU, we assumed that it was due to the limit time of our data acquisition state, namely, we did not give the system enough time to form the floc blanket, so we extend the duration of that state, from 3600 seconds to 4800.
+
 * **What went wrong?**
 
 As we can see, the effluent turbidiy did not vary a lot even though the increment function worked, after examed the data we found that the coagulant pump was actually worked around it lowest speed and the past research showed that our pump did not work well at that speed. So in the coming experiment we are going to set a higher intercept for the increment function, so the lowest rpm in our experiment now is 12.
@@ -196,7 +205,6 @@ We have encountered several problems: the high pressure within the system, the l
 Logan, B. E., Hermanowicz, S. W., & Parker,A. S. (1987). A Fundamental Model for Trickling Filter Process Design. Journal (Water Pollution Control Federation), 59(12), 1029–1042.
 
 # Manual
-The goal of this section is to provide all of the guidance that would be necessary for a future team to pick up your work where you left off. Please try to be thorough and put yourselves in the shoes of a newcomer to the project. Below are some recommended sections, but the manual will likely take a slightly different form for each team.
 
 ## Fabrication Details
 Include any information related to the fabrication of equipment, experimental apparatuses, or technologies. Include the purpose of each step and the fabrication methods used. Reference appropriate safety precautions.
@@ -236,7 +244,18 @@ Include any information related to the fabrication of equipment, experimental ap
 **Step 7.** Pour out the coagulant reservoir into a different bucket and rinse reservoir with deionized water to make sure all residue is washed out. Take out the push pin then wash out the coagulant reservoir throughly. Replenish reservoir with 5L (or less) of deionized water. Use MathCAD to determine how much 70.9mg/L PAC coagulant needed to use to get the desired results for the experiment.
 
 ## Experimental Checklist
-Another potential section could include a list of things that you need to check before running an experiment.
+
+Before running the experiment, we check apparatus following steps below:
+
+First, we open the influent and effluent turbidity meter and check whether the inside glass container is clean;
+
+Second, before reassemble the turbidity meter again, we turn on only the water pump and let tap water run through the system to see if their is any leak in the system, especially near the turbidity meter, in case water would flow to interior of the meter and cause damage to the apparatus;
+
+Third,  turn on all pumps and set them with a tiny RPM value, then check if pumps run in the right direction;
+
+Fourth, go to the "edit rules" part of the ProCoDA, check the parameter of increment function, make sure those valve are set according to the calculation;
+
+Fifth, and the last step, go the the "operation" part of ProCoDA, start the system with "Data Acquisition States" and make sure states would switch between one another automatically. 
 
 ## ProCoDA Method File
 Use this section to explain your method file. This could be broken up into several components as shown below:
