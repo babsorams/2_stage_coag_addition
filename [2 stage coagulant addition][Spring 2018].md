@@ -49,6 +49,11 @@ Explain the techniques you have used to acquire additional data and insights. Re
 
 Below, some example sections are given. Sectioning the report is meant to keep similar information together.  Continue making sections as necessary, or delete sections if you do not need them. Feel free to add subsubsections to further delineate the information. For example, under the Experimental Apparatus section below, the EStaRS team might consider having sections such as "Filter Design" and "Filter Fabrication".
 
+Reported Cornell University tap water characteristics were as follows: total hardness $\approx$ 150 mg/L as CaCO3; total alkalinity $\approx$ 108 mg/L as CaCO3; pH $\approx$ 7.44; turbidity $\approx$ 0.06 NTU; and concentration of DOC $\approx$ 1.95 mg/L (Bolton Point Water System 2015). A concentrated stock of HA was added into the raw water to get concentrations ranging from 0mg/L to 15 mg/L. PACl coagulant doses ranged from 0.53 mg/L as Al to 2.65 mg/L as Al used to treat the synthetic water. The coagulant and HA dosage was controlled by the rotation speed of separate peristaltic pumps. Influent turbidities of 50 and 100 NTU were tested. Flocculation was accomplished through a coiled 9.52 mm (inner diameter) tube. The overall experimental flow rate was 6 mL/s and the radius of curvature (Rc) was 15 cm.
+
+
+
+
 ### Experimental Apparatus
 Explain your apparatus setup using enough detail such that future teams can recreate your apparatus. Make sure to explain why you built it this way.
 * Design (calculations, constraints)
@@ -141,12 +146,12 @@ Use this section to explain your method file. This could be broken up into sever
 ### States
 Here, you should describe the function of each state in your method file, both in terms of its overall purpose and also in terms of the details that make it distinct from other states. For example:
 \begin{itemize}
-\item \underline{OFF} - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
 
 \item \underline{OFF} - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
 \item \underline{ON} - ON state of ProCoDa. All sensors, relays, and pumps are turned on.
 \item \underline{Data Acquisition} - State 3 of the experimental process where the coagulant pump is working and the increment function would increase its value each time when we switch to this state. The data acquisition state usually set to be 2 hours, which is enough for the floc blanket to form.
 \end{itemize}
+
 ### Set Points
 Here, you should list the set points used in your method file and explain their use as well as how each was calculated.
 
