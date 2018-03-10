@@ -158,9 +158,11 @@ plt.show()
 
 
 ![datalog](https://github.com/AguaClara/2_stage_coag_addition/blob/master/image/100NTU.png)
+
                        Figure: model result which guide our experiment
 
 ![datalog](https://github.com/AguaClara/2_stage_coag_addition/blob/master/image/experiment%20data.png)
+
                        Figure: one of the typical experiment we ran
   
 In this plot we can see the increment function in ProCoDA worked well and increase the pump speed during the trial. However, we found that the effluent turbidity did not go down steadily as we expected. After analyzed the data we find that the pump speed was around the lower limit of the pump and I the past research we found that our pumps did not function well at low speed. So we revised our ProCoDA method file, increase the y intercept of our increment function so that we can start our circulation witha higher pump speed(start with 12rpm).
