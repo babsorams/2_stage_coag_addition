@@ -163,14 +163,16 @@ plt.show()
 
 
 ![datalog](https://github.com/AguaClara/2_stage_coag_addition/blob/master/image/experiment%20data.png)
-  Figure 1: one of the typical experiment we ran
+  :Figure 1: one of the typical experiment we ran:
 In this plot we can see the increment function in ProCoDA worked well and increase the pump speed during the trial. However, we found that the effluent turbidity did not go down steadily as we expected. After analyzed the data we find that the pump speed was around the lower limit of the pump and I the past research we found that our pumps did not function well at low speed. So we revised our ProCoDA method file, increase the y intercept of our increment function so that we can start our circulation witha higher pump speed(start with 12rpm).
 
 We also ran a one stage experiment with the increment function varying the chemical dosage from zero to 1.5mg/L with 100 NTU target for the influent turbidity. We ran the system for 15 hours and collected the data from ProCoDa. We found that even though the increment function worked, our effluent turbidity fluctuated slightly; the maximum value was 6.5 and the minimum value was 5.5, so we wondered if the dosage of the chemical did increase as much as we expect in the calculation. Because, according to our previous work and calculations, the effluent turbidity should have a positive correlation with the chemical dosage of coagulant but right now it seemed like the dosage did not affect the effluent turbidity significantly.
 
 * **Did these results line up with expectations?**
+
 In this semster, up to now, we only did several trials of one stage addition. Our expectation for the one stage addtion is that the floc blanket can be found in our sedimentation tank and the effluent go down to a level that is desirable for the AguaClara filtration system. The effluent turbidity in several trials happened to be around 20NTU, we assumed that it was due to the limit time of our data acquisition state, namely, we did not give the system enough time to form the floc blanket, so we extend the duration of that state, from 3600 seconds to 4800.
 * **What went wrong?**
+
 As we can see, the effluent turbidiy did not vary a lot even though the increment function worked, after examed the data we found that the coagulant pump was actually worked around it lowest speed and the past research showed that our pump did not work well at that speed. So in the coming experiment we are going to set a higher intercept for the increment function, so the lowest rpm in our experiment now is 12.
 
 
