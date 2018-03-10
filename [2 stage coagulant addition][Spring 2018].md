@@ -47,13 +47,21 @@ Explain the techniques you have used to acquire additional data and insights. Re
 
 Below, some example sections are given. Sectioning the report is meant to keep similar information together.  Continue making sections as necessary, or delete sections if you do not need them. Feel free to add subsubsections to further delineate the information. For example, under the Experimental Apparatus section below, the EStaRS team might consider having sections such as "Filter Design" and "Filter Fabrication".
 
+### Experimental Design
+
+In our experiment, there should be two contact chambers before the fluid entered the flocculator,they are place for coagulant to collide with particles in the water. Originally, We designed the pump to input the correct coagulant dosage before each contact chamber, allowing the two stage coagulant addition. However, the ProCoDA system we used had its limit, the maximum number of pump it could control was 2, so there had to be one coagulant pump under manual control. So we changed the design, we used the second pump to drain from the first pump when we ran the two stages addition experiment. 
+
+Finally, we decided to carry out the following procedure. The humic acid would be a fixed variable and the turbidity and the coagulant dosage would vary. Firstly, a set of one stage coagulant addition experiments was carried out while we kept the second coagulant pump closed. The goal of this set of experiment was finding the coagulant dosage which could reduce the effluent turbidity to 3 NTU or less, which was the value that AguaClara filter system requires. After that, the dosage used in that first experiment (1 stage addition) was divided into two parts, where we would find the perfect distribution, at that point most of the coagulant from the first coagulant pump would be used to absorb the humic acid in the system, and coagulant adds by the second pump would only work on lowering the turbidity to be able to attach to every particle in the system to its surface. In order to do this, we installed a T-connection between the two coagulant pumps. This helped us manage the amount of coagulant that was put into the system. The idea behind this was that the first pump would control the total amount of coagulant being put into the system. When the second coagulant pump was open, it would be able to control how much coagulant would be used for the second dosage, drain directly from the first valve, so we could maintain a fixed dosage of the total amount of coagulant put in. This helped us test whether or not having a second dosage of coagulant before the second contact chamber would make the experiment perform better than the total amount of coagulant dosage in one stage. 
+
+
 ### Experimental Apparatus
-Explain your apparatus setup using enough detail such that future teams can recreate your apparatus. Make sure to explain why you built it this way.
+
 * Design (calculations, constraints)
 The ProCoDA system can only control two pumps, and one of the coagulant pump had to be connected to the system, so we could not add humic acid and clay separately like some of other groups in the lab.
 
 * Schematic (label parts)
 ![apparatus](image/ApparatusSketch.jpg)
+   Figure： Apparatus Diagram
 
 The way in which the apparatus worked was the following. To start with, clay, humic acid and water were added according to the calculation, into a 10L stock tank with a stir. This stock tank was connected to the clay pump, the pump speed would be control by ProCoDA system to maintain a relatively fixed influent turbidity. After that, mixture of humic acid and clay went through the first turbidity meter and influent turbidity of the raw water is measured.
 
@@ -67,13 +75,15 @@ Then, the mixture continued on to the second chamber. This can be seen in the fo
 * Image
 
 ![apparatus](image/CurrentApparatus2.png)
-![apparatus](image/CurrentApparatus.jpg)
-* Materials (dimensions, materials)
+
+Figure: Current Apparatus Set-up
 
 * Complications in construction
-
-* If already constructed: write a brief summary of important constraints, include any revisions to apparatus, also reference the prior report where construction is described
+ It is kind of hard to make a perfect system without any leak, because many parts we used in apparatus fabrication is processed by ourself, for example the cut and the drilling, also the "tube stretch". So it required us to keep monitoring the behavior of our apparatus, and fix the problem whenever it occurs.
+ 
+ 
 * Summary: After the study of last semester and this semester, we came up with this current design. Due to the limit bench area, there is a lot of simplification in our apparatus set-up, but it did reflect the nature of the AguaClara water treatment plant. The next step of our experiment apparatus improvement is to reduce simplification, and recalculation on the size of contact chamber is also required.
+
 ### Procedure
 For one stage addition experiment, in every single circulation, the coag dosage is: 1.1-2.6mg/L, which was increased 7 times using the increment function, in which the values were derived based on those used by Yingda (Author of our reference thesis). We should add two more data point, one between 1-1.5, and the other between 1.5-2.0. Because in the past we generated desirable effluent turbidity around that range, besides, we don't have to start from 0.5mg/L, for that value is too low to treat the raw water.
 
@@ -81,15 +91,13 @@ We are planning to run 3 circulations per week, which will take 3 days, and we w
 
 We will carry on series of control experiment for 2 stages addition, and find the most effective portion of coagulant allocation. Then we will compare with data generated from 1 stage experiment.
 
-Two-stage coagulant addition experiment should base on the data we generate with one stage addition experiment, the total amount coag addition can be the least dosage that achieve the effluent requirement, and then we add two more circulations for comparison, and vary the total amount, +-0.5 on the basis of the first trial. During those weeks we conduct two stages addition, we won’t test the effect of humic acid on flocculation because the mechanism of this part should be similar between one and two stage.
+Two-stage coagulant addition experiment should base on the data we generate with one stage addition experiment, the total amount coag addition can be the least dosage which can achieve the effluent requirement, and then we add two more circulations for comparison, vary the total amount, +-0.5 on the basis of the first trial. During those weeks we conduct two stages addition, we won’t test the effect of humic acid on flocculation because the mechanism of this part should be similar between one and two stage.
 
 ## Results and Analysis
 Present an observation (results), then explain what happened (analysis).  Each paragraph should focus on one aspect of your results. In that same paragraph, you should interpret that result.  
 In other words, there should not be two distinct paragraphs, but instead one paragraph containing one result and the interpretation and analysis of this result. Here are some guiding questions for results and analysis:
 
-When describing your results, present your data, using the guidelines below:
-* What happened? What did you find?
-* Show your experimental data in a professional way.
+
 ```python
 import numpy as np
 import pandas as pd
@@ -151,16 +159,23 @@ plt.plot(coag, Data50NTU['0 mg/L'], 'r.', coag, Data50NTU['3 mg/L'], 'b.',
          coag, Data50NTU['6 mg/L'], 'g.', coag, Data50NTU['9 mg/L'], 'm.',
          coag, Data50NTU['12 mg/L'], 'c.', coag, Data50NTU['15 mg/L'], 'y.')
 
-plt.show()
-```
-![datalog]()
-Figure 1: one of the typical experiment we ran
-
+ plt.show()
+ ```
+ 
+ 
+ ![datalog](https://github.com/AguaClara/2_stage_coag_addition/blob/master/image/100NTU.png)
+ 
+                        Figure: model result which guide our experiment
+ 
+ ![datalog](https://github.com/AguaClara/2_stage_coag_addition/blob/master/image/experiment%20data.png)
+ 
+                        Figure: one of the typical experiment we ran
 In this plot
 After describing a particular result, within a paragraph, go on to connect your work to fundamental physics/chemistry/statics/fluid mechanics, or whatever field is appropriate. Analyze your results and compare with theoretical expectations; or, if you have not yet done the experiments, describe your expectations based on established knowledge. Include implications of your results. How will your results influence the design of AguaClara plants? If possible provide clear recommendations for design changes that should be adopted. Show your experimental data in a professional way using the following guidelines:
 
 * **Did these results line up with expectations?**
 In this semster, up to now, we only did several trials of one stage addition. Our expectation for the one stage addtion is that the floc blanket can be found in our sedimentation tank and the effluent go down to a level that is desirable for the AguaClara filtration system. The effluent turbidity in several trials happened to be around 20NTU, we assumed that it was due to the limit time of our data acquisition state, namely, we did not give the system enough time to form the floc blanket, so we extend the duration of that state, from 3600 seconds to 4800.
+
 * **What went wrong?**
 As we can see, the effluent turbidiy did not vary a lot even though the increment function worked, after examining the data we found that the coagulant pump actually worked around its lowest speed, and the past research showed that our pump did not work well at that speed. Therefore, for future experiments, we are going to set a higher intercept for the increment function, so the lowest rpm in our experiment now is 12.
 
@@ -178,13 +193,10 @@ In the rest semester, we would keep running both one stage and two stage experim
 If we validate our 2 stage hypothesis, we could use this model to guide the dosage in water treatment plant and save the coagulant, cut down the operational cost.
 
 ## Future Work
-Describe your plan of action for the next several weeks of research. Detail the next steps for this team. How can AguaClara use what you discovered for future projects? Your suggestions for challenges for future teams are most welcome. Should research in this area continue?
+We have encountered several problems: the high pressure within the system, the leak caused by the poor connection. In next few weeks, we would fix those problems and begin to conduct our experiment. After discussed with Monroe, we suspected that the size of our first contact chamber is not enough for the HA and coag nanoparticles in the synthetic water to generate enough successful collision, so recalculation and test on the CC are also required.
 
 ## Bibliography
 Logan, B. E., Hermanowicz, S. W., & Parker,A. S. (1987). A Fundamental Model for Trickling Filter Process Design. Journal (Water Pollution Control Federation), 59(12), 1029–1042.
-
-# Manual
-The goal of this section is to provide all of the guidance that would be necessary for a future team to pick up your work where you left off. Please try to be thorough and put yourselves in the shoes of a newcomer to the project. Below are some recommended sections, but the manual will likely take a slightly different form for each team.
 
 ## Fabrication Details
 Include any information related to the fabrication of equipment, experimental apparatuses, or technologies. Include the purpose of each step and the fabrication methods used. Reference appropriate safety precautions.
@@ -224,7 +236,17 @@ Include any information related to the fabrication of equipment, experimental ap
 **Step 7.** Pour out the coagulant reservoir into a different bucket and rinse reservoir with deionized water to make sure all residue is washed out. Take out the push pin then wash out the coagulant reservoir throughly. Replenish reservoir with 5L (or less) of deionized water. Use MathCAD to determine how much 70.9mg/L PAC coagulant needed to use to get the desired results for the experiment.
 
 ## Experimental Checklist
-Another potential section could include a list of things that you need to check before running an experiment.
+Before running the experiment, we check apparatus following steps below:
+
+First, we open the influent and effluent turbidity meter and check whether the inside glass container is clean;
+
+Second, before reassemble the turbidity meter again, we turn on only the water pump and let tap water run through the system to see if their is any leak in the system, especially near the turbidity meter, in case water would flow to interior of the meter and cause damage to the apparatus;
+
+Third,  turn on all pumps and set them with a tiny RPM value, then check if pumps run in the right direction;
+
+Fourth, go to the "edit rules" part of the ProCoDA, check the parameter of increment function, make sure those valve are set according to the calculation;
+
+Fifth, and the last step, go the the "operation" part of ProCoDA, start the system with "Data Acquisition States" and make sure states would switch between one another automatically.
 
 ## ProCoDA Method File
 Use this section to explain your method file. This could be broken up into several components as shown below:
@@ -279,25 +301,63 @@ Here, you should describe the function of each state in your method file, both i
 Here, you should list the set points used in your method file and explain their use as well as how each was calculated.
 >>>>>>> fbf5fa40cd4f524893523acb3ec20f2ef10e94fb
 
-## Python Code
-
-### Variables
-$g$: gravity
-$\sigma$: dispersion
-$a$: amplitude
-$h$: water depth
-$H$: distance from wave crest to trough (2$a$)
-$T$: wave period
-$\lambda$: wavelength
-$k$: wavenumber
-$c_p$: celerity (wave phase speed)
-$P$: pressure
-$F$: force
-$u$, $w$: x-velocity, z-velocity components
-
-```python
-# Comment
-```
+ 
+ ## Python Code
+ 
+ ### Variables
+ $g$: gravity
+ $\sigma$: dispersion
+ $a$: amplitude
+ $h$: water depth
+ $H$: distance from wave crest to trough (2$a$)
+ $T$: wave period
+ $\lambda$: wavelength
+ $k$: wavenumber
+ $c_p$: celerity (wave phase speed)
+ $P$: pressure
+ $F$: force
+ $u$, $w$: x-velocity, z-velocity components
+ 
+ ```python
+ # flow rate of the system
+ V_sedimentation = 2*(u.mm/u.s)
+ # i did not have the ID data of the 1 inch PVC pipe
+ ID_pipe = 0.96*u.inch
+ Area_pipe = 0.25*np.pi*(ID_pipe**2)
+ Q_system = V_sedimentation*Area_pipe
+ # output the value
+ 
+ # QUES: what is the relation of inlet water pump RPM w/ this value???
+ 
+ print('The flow rate of the system is', (ut.sig(Q_system.to(u.mL/u.s),3)))
+ # mass flow of coagulant
+ 
+ # desired conc of PAC per L of water in the system. (0.5-2.5mg/L)(normally fixed range)
+ 
+ conc_PACL = 1.1*(u.mg/u.L)
+ # conc_PACL = np.array[(0.0,0.5,1.0,1.5)]
+ MassFlow_coag = conc_PACL*Q_system
+ print('The mass flow of coagulant in the system is',ut.sig(MassFlow_coag.to(u.mg/u.s),3))
+ # how many mL of lab concentration are added per L into the reservoir(adjustable)
+ k_dilution = 3.13*(u.ml/u.l)
+ 
+ # concentration in grams per L of lab solution(normally fixed value)
+ conc_labsolution = 70.9*(u.g/u.L)
+ 
+ conc_reservoir = conc_labsolution*k_dilution
+ Q_reservoir = MassFlow_coag/conc_reservoir
+ print('The volumetric flow rate of solution leaving the reservior \
+ and entering the system to achieve desired final concentration',Q_reservoir.to(u.mL/u.s))
+ 
+ V_reservoir = 1*u.L
+ V_lab_solution = V_reservoir*conc_reservoir/conc_labsolution
+ print('The volume of lab concentration solution we need to add into the reservoir is',ut.sig(V_lab_solution,3))
+ # The flow pumped out of the pump per round(measured by experiment)
+ Q_perRPM_coag1 = 0.00042*(u.ml/u.s)
+ # Q_perRPM_coag2 = 0.0025*(u.ml/u.s)
+ numRPM = Q_reservoir/Q_perRPM_coag1
+ print('The pump should run with a speed of',numRPM.to(u.dimensionless))
+ ```
 
 # Add/Delete/Change this Template as you see Fit
 When using this template keep in mind that this serves three purposes. The first is to provide your team feedback on your progress, assumptions, and conclusions. The second is to keep your team focused on what you are learning and doing for AguaClara. Another is to educate future teams on what you've learned and done. This document should be comprehensive, consistent, and well-written. With that in mind, add, subtract, or move sections. Reach out to the RAs and graders for help with figuring out what should or shouldn't include. Focus on how wonderful a reference you are making through this and work hard on communicating amongst yourselves and with future teammates. (Delete this section before submitting)
