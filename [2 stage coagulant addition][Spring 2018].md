@@ -139,14 +139,17 @@ plt.plot(coag, Data50NTU['0 mg/L'], 'r.', coag, Data50NTU['3 mg/L'], 'b.',
 
 plt.show()
 ```
-![linear](https://github.com/jillianwhiting/Jillian-Whiting/blob/master/Images/linear.png?raw=true)
-Figure 1: Captions are very important for figures. Captions go below figures.
+![datalog]()
+Figure 1: one of the typical experiment we ran
 
+In this plot
 After describing a particular result, within a paragraph, go on to connect your work to fundamental physics/chemistry/statics/fluid mechanics, or whatever field is appropriate. Analyze your results and compare with theoretical expectations; or, if you have not yet done the experiments, describe your expectations based on established knowledge. Include implications of your results. How will your results influence the design of AguaClara plants? If possible provide clear recommendations for design changes that should be adopted. Show your experimental data in a professional way using the following guidelines:
 * Why did you get those results/data?
 * Did these results line up with expectations?
+In this semster, up to now, we only did several trials of one stage addition. Our expectation for the one stage addtion is that the floc blanket can be found in our sedimentation tank and the effluent go down to a level that is desirable for the The effluent turbidity in several trials happened to be around 20NTU, we assumed that it was due to the limit time of our data acquisition state, namely, we did not give the system enough time to form the floc blanket, so we extend the duration of that state, from 3600 seconds to 4800. 
 * What went wrong?
-* If the data do not support your hypothesis, is there another hypothesis that describes your new data?
+As we can see, the effluent turbidiy did not vary a lot even though the increment function worked, after examed the data we found that the coagulant pump was actually worked around it lowest speed and the past research showed that our pump did not work well at that speed. So in the coming experiment we are going to set a higher intercept for the increment function, so the lowest rpm in our experiment now is 12.
+
 
 ## Conclusions
 
@@ -156,7 +159,10 @@ Generally, we deduced that by using the current design of system, when the turbi
 
 The calculation of coagulant dosage and the component of clay-humic acid mixture could be done on python now, we transfered the original MathCAD base code and translated it into python.
 
+In the rest semester, we would keep running both one stage and two stage experiment.
+
 If we validate our 2 stage hypothesis, we could use this model to guide the dosage in water treatment plant and save the coagulant, cut down the operational cost.
+
 ## Future Work
 Describe your plan of action for the next several weeks of research. Detail the next steps for this team. How can AguaClara use what you discovered for future projects? Your suggestions for challenges for future teams are most welcome. Should research in this area continue?
 
