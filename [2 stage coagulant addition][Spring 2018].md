@@ -54,10 +54,14 @@ Explain your apparatus setup using enough detail such that future teams can recr
 
   $\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
 * Schematic (label parts)
+![apparatus](image/ApparatusSketch.jpg)
 
-  <img src="https://github.com/jillianwhiting/Jillian-Whiting/blob/master/Images/IMG_0009.jpg?raw=true" height=250 width=200>
 
 * Image (from lab; label parts)
+
+![apparatus](image/100NTU.png)
+![apparatus](image/CurrentApparatus2.png)
+![apparatus](image/CurrentApparatus.jpg)
 * Materials (dimensions, materials)
 * Complications in construction
 * If already constructed: write a brief summary of important constraints, include any revisions to apparatus, also reference the prior report where construction is described
