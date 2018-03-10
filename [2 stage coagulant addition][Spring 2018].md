@@ -10,7 +10,7 @@
 **Goals & Objectives:** This semester, our group focused on comparing 1 stage addition with 2 stage addition and carrying on the experiment with different influent turbidities, coagulant dosage and humic acid concentration as well as trying to improve Yingda's coagulant dosage model. Besides, more insight on the particles bond mechanism, flocculation, and geometry of the contact chambers were needed. Eventually, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
 
 
-**What we have accomplished:** Up to now we have completed the literature review, and working on apparatus set up.The research was  based on Yingda's thesis, who studied the effect of humic acid on the coagulant dosing model. Based on the bonding mechanism, it could be hypothesized that two-stage coagulant addition would increase the removal efficiency of particles while maintaining the coagulant dosage. 
+**What we have accomplished:** Up to now we have completed the literature review, and working on apparatus set up.The research was  based on Yingda's thesis, who studied the effect of humic acid on the coagulant dosing model. Based on the bonding mechanism, it could be hypothesized that two-stage coagulant addition would increase the removal efficiency of particles while maintaining the coagulant dosage.
 
 
 **Future work:** We have encountered several problems: the high pressure within the system, the leak caused by the poor connection. In next few weeks, we would fix those problems and begin to conduct our experiment. After discussed with Monroe, we suspected that the size of our first contact chamber is not enough for the HA and coag nanoparticles in the synthetic water to generate enough successful collision, so recalculation and test on the CC are also required.
@@ -22,14 +22,14 @@
 
 We have to understand the physical and chemical process in flocculation before we can optimize our water treatment process, thus a predictive model which can describe the flocculation process is needed. However, in the past research of AguaClara project team, the model we built only consider the clay and coagulant in the system, it is kind of useless in engineering applications because NOM can be found in nearly every surface water resources and some of the groundwater resources and the presence of NOM can create a need for increased coagulant doses in drinking water treatment.
 
-So we have to extend the model base on our past research, take the effect of NOM on flocculation into consideration. After study the bond mechanism between clay, humic acid, and coagulant, we came up with an assumption that we could add the coagulant separately to save coagulant, because it was assumed that after stage 1, all coagulant would be coated by humic acid, thus the coagulant adds in stage 2 could merely function as an agglomerant then achieved better performance in flocculation process and the aggregation process. After we have the model, we can try to optimize our water treatment process, for example, use the coagulant more efficiently and cut down the operational cost. AguaClara is an engineering project team, so cost is always our concern. 
+So we have to extend the model base on our past research, take the effect of NOM on flocculation into consideration. After study the bond mechanism between clay, humic acid, and coagulant, we came up with an assumption that we could add the coagulant separately to save coagulant, because it was assumed that after stage 1, all coagulant would be coated by humic acid, thus the coagulant adds in stage 2 could merely function as an agglomerant then achieved better performance in flocculation process and the aggregation process. After we have the model, we can try to optimize our water treatment process, for example, use the coagulant more efficiently and cut down the operational cost. AguaClara is an engineering project team, so cost is always our concern.
 
 
 ## Literature Review and Previous Work
 
 The fundamental objective of the two stage coagulant addition subteam is to research and find out if there are beneficial effects of two stage addition of PaCl. This would theoretically allow us to use our coagulant more efficiently which would consequently also reduce cost. Besides lab research, this requires research from external parties and other AguaClara teams. We investigated the effects of humic Acid in water and how it coagulates, as well as revisiting Yingda Du’s thesis on the effects of humic acid on flocculation. With this background knowledge, this would aid our advancement in our research.
 
-Humic acid is considered natural organic matter, and it is of the final components made after the breakdown of plant and animal decay. It is commonly found in the soil as it promotes a fertility, it is also used as fertilizers. There is an increase in humic acid concentrations in the wet seasons. The most visual issue of humic acid is that it cause water to change colour. However, in the process of creating potable water, the addition of other compounds and elements with humic acid assists the formation of harmful byproducts such as trihalomethane and haloacetic acid. 
+Humic acid is considered natural organic matter, and it is of the final components made after the breakdown of plant and animal decay. It is commonly found in the soil as it promotes a fertility, it is also used as fertilizers. There is an increase in humic acid concentrations in the wet seasons. The most visual issue of humic acid is that it cause water to change colour. However, in the process of creating potable water, the addition of other compounds and elements with humic acid assists the formation of harmful byproducts such as trihalomethane and haloacetic acid.
 
 ### Observations and a Geometric Explanation of the Effects of Humic Acid on Flocculation
   The general science behind flocculation can be understood by analysing the thesis of the observations and a geometric explanation of the effects of HA flocculation by Yingda Du. The thesis gives a clear layout of why we are using HA as the natural organic matter as well as the chemistry behind the creation of flocs. We are using HA as the exemplary compound to represent dissolved NOM because it is the most commonly found form of NOM in our surroundings.  Clay is used to represent the colloidal solids. As NOM is easily found in our soil and water, it increases our need of coagulant to promote flocculation of dissolved particles in water.  Hence why in our model of the experiment we add humic acid and clay with the coagulant PaCl (polyaluminium chloride). However, there is a cut-off point as to how much coagulant we can add to the raw water for it to be beneficial in the removal of NOM. This observation shows that some NOM become increasingly uncooperative to being removed due to the increased presence of coagulant. Our understanding behind the lack of floc formation of NOM in the presence of increased coagulant addition is limited, yet it is an area of interest in determining the magnitude of the effect.
@@ -56,12 +56,20 @@ Explain your apparatus setup using enough detail such that future teams can recr
   $\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
 * Schematic (label parts)
 
-  <img src="https://github.com/jillianwhiting/Jillian-Whiting/blob/master/Images/IMG_0009.jpg?raw=true" height=250 width=200>
+  ![apparatus diagram](image/ApparatusSketch.jpg)
 
 * Image (from lab; label parts)
-* Materials (dimensions, materials)
-* Complications in construction
-* If already constructed: write a brief summary of important constraints, include any revisions to apparatus, also reference the prior report where construction is described
+![apparatus diagram](image/CurrentApparatus.jpg)
+
+  ![apparatus diagram](image/CurrentApparatus2.png)
+* Materials (dimensions, materials):
+
+* Complications in construction:
+
+
+* Summary of construction:
+ constraints, include any revisions to apparatus, also reference the prior report where construction is described
+ The
 
 ### Procedure
 Discuss your experimental procedure. How did you run your experiment? What were you testing? What were the values of relevant parameters?
