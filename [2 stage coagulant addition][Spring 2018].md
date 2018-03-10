@@ -71,7 +71,7 @@ Then, the mixture continued on to the second chamber. This can be seen in the fo
 * Image
 
 ![apparatus](image/CurrentApparatus2.png)
-![apparatus](image/CurrentApparatus.jpg)
+
   Figure: Current Apparatus Set-up
 * Complications in construction
 It is kind of hard to make a perfect system without any leak, because many parts we used in apparatus fabrication is processed by ourself, for example the cut and the drilling, also the "tube stretch". So it required us to keep monitoring the behavior of our apparatus, and fix the problem whenever it occurs.
@@ -156,14 +156,14 @@ plt.plot(coag, Data50NTU['0 mg/L'], 'r.', coag, Data50NTU['3 mg/L'], 'b.',
 
 plt.show()
 ```
-* datalog
 
 
 
 
 
 ![datalog](https://github.com/AguaClara/2_stage_coag_addition/blob/master/image/experiment%20data.png)
-  :Figure 1: one of the typical experiment we ran:
+                       Figure 1: one of the typical experiment we ran
+  
 In this plot we can see the increment function in ProCoDA worked well and increase the pump speed during the trial. However, we found that the effluent turbidity did not go down steadily as we expected. After analyzed the data we find that the pump speed was around the lower limit of the pump and I the past research we found that our pumps did not function well at low speed. So we revised our ProCoDA method file, increase the y intercept of our increment function so that we can start our circulation witha higher pump speed(start with 12rpm).
 
 We also ran a one stage experiment with the increment function varying the chemical dosage from zero to 1.5mg/L with 100 NTU target for the influent turbidity. We ran the system for 15 hours and collected the data from ProCoDa. We found that even though the increment function worked, our effluent turbidity fluctuated slightly; the maximum value was 6.5 and the minimum value was 5.5, so we wondered if the dosage of the chemical did increase as much as we expect in the calculation. Because, according to our previous work and calculations, the effluent turbidity should have a positive correlation with the chemical dosage of coagulant but right now it seemed like the dosage did not affect the effluent turbidity significantly.
