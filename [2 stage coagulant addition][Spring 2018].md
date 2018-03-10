@@ -87,12 +87,66 @@ When describing your results, present your data, using the guidelines below:
 * What happened? What did you find?
 * Show your experimental data in a professional way.
 ```python
-from aide_design.play import*
-x = np.array([1,2,3,4,5])
-y = np.array([1,2,3,4,5])
-plt.figure('ax',(10,8))
-plt.plot(x,y,'*')
-plt.savefig('/Users/jillianwhiting/github/Jillian-Whiting/Images/linear')
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+
+from aide_design import floc_model as floc
+
+from aide_design.units import unit_registry as u
+
+import sys, os
+GitPath = os.path.join('~', 'Documents', 'GitHub')
+myGitHubdir=os.path.expanduser(GitPath)
+sys.path.append(myGitHubdir)
+
+
+k = 0.24
+coag = np.array([0.53, 1.06, 1.59, 2.11, 2.56]) * u.mg/u.L
+conc_humic_acid = np.array([0, 3, 6, 9, 12, 15] * u.mg/u.L)
+# dataset[0] is the 50NTU, dataset[1] is the 100NTU.
+# Within both subgroups, [0] is the pC.0, ranging evenly up to [5] which is the
+# pC.15
+dataset = np.array([[  # Dataset[0]: the 50NTU datasets
+                     [0.634, 0.729, 0.891, 1.062, 1.205],
+                     [0.563, 0.717, 0.903, 1.038, 1.193],
+                     [0.136, 0.513, 0.793, 1.027, 1.095],
+                     [0.109, 0.264, 0.749, 1.002, 1.089],
+                     [0.084, 0.128, 0.647, 0.962, 1.057],
+                     [0.061, 0.094, 0.308, 0.717, 0.928]
+                     ],
+                    [  # Dataset[1]: the 100NTU datasets
+                     [0.746, 0.953, 1.191, 1.295, 1.414],
+                     [0.563, 0.835, 1.085, 1.255, 1.403],
+                     [0.185, 0.692, 0.971, 1.254, 1.390],
+                     [0.105, 0.280, 0.956, 1.238, 1.361],
+                     [0.097, 0.207, 0.740, 1.209, 1.316],
+                     [0.084, 0.157, 0.566, 1.084, 1.314]
+                     ]
+                    ])
+indexnames = ['{0} mg/L'.format(i) for i in np.arange(0,16,3)]
+Data50NTU = pd.DataFrame(dataset[0], index=indexnames).T
+
+Data100NTU = pd.DataFrame(dataset[1], index=indexnames).T
+print(Data50NTU)
+
+coagGraph = np.arange(1 * 10**-4, 25.1 * 10**-4, 1 * 10**-4) * u.kg/u.m**3
+enerDis = 4.833 * u.mW/u.kg
+temperature = 25 * u.degC
+resTime = 302 * u.s
+tubeDiam = 3/8 * u.inch
+# Begin graphing the 50NTU datasets
+plt.figure('50NTU', (6,6))
+plt.title('50 NTU Graph')
+plt.ylabel('pC*')
+plt.xlabel('coagulant dosage (mg/L)')
+
+
+
+plt.plot(coag, Data50NTU['0 mg/L'], 'r.', coag, Data50NTU['3 mg/L'], 'b.',
+         coag, Data50NTU['6 mg/L'], 'g.', coag, Data50NTU['9 mg/L'], 'm.',
+         coag, Data50NTU['12 mg/L'], 'c.', coag, Data50NTU['15 mg/L'], 'y.')
+
 plt.show()
 ```
 ![linear](https://github.com/jillianwhiting/Jillian-Whiting/blob/master/Images/linear.png?raw=true)
@@ -121,18 +175,23 @@ The goal of this section is to provide all of the guidance that would be necessa
 ## Fabrication Details
 Include any information related to the fabrication of equipment, experimental apparatuses, or technologies. Include the purpose of each step and the fabrication methods used. Reference appropriate safety precautions.
 
-## Special Components
-If your subteam uses a particular part that is unique and you could foresee a future subteam needing to order it or learn more about it, please include basic information like the vendor where it was purchased, catalog/item number, and a link to any documentation.
 
 ## Experimental Methods
 ### Set-up
-Step 1.
-* Put tasks in a sequential order.
-* It is okay to have sub-lists.
-  - Like this.
+***attention：*** the content about experiment set-up is distributed to the fabriaction and experiment part.
 
 ### Experiment
-Step 1.
+**Step 1.** Make sure the stocks are filled. One stock will have a diluted solution of coagulant and the other will have a solution of water, clay, and humic acid. The concentration depends on the experiment you want to run.
+
+
+**Step 2.** Once the stocks are ready, the water and wastewater valves are open, the turbidimeters open, and the apparatus completely filled with water, the experiment is now ready to run.
+
+**Step 3.** Be sure to turn on the wastewater pump, next to the effluent turbidimeter, to ensure that the flocs in the weir are transported to the wastewater line. We do not want the flocs to go through the effluent turbidimeter.
+
+
+**Step 4.** Go to ProCoDa and turn the state from OFF to ON to begin the clay pump so the influent turbidimeter will reach 100 NTU. Once the turbidimeter is steadily at 100 NTU, go back to ProCoDa and turn the stage from ON to Data acquisition state, which will turn on the coagulant pump.
+**Step 5.** The Data Acquisition state will go back and forth with the Flush state which is used for second stage addition. The data will be recorded on an excel file to be analyzed later.
+**Step 6.** Once the experiment was ran and the data collected, turn off ProCoDa and save the data. Proceed to the cleaning procedure when experimentation is finished.
 
 ### Cleaning Procedure
 Step 1. Turn off coagulant and clay pump;
@@ -159,23 +218,36 @@ Use this section to explain your method file. This could be broken up into sever
 Here, you should describe the function of each state in your method file, both in terms of its overall purpose and also in terms of the details that make it distinct from other states. For example:
 \begin{itemize}
 ***I don't know why the template kept the format of Overleaf***
+
 **{OFF}** - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
+
 **{ON}** - ON state of ProCoDa. All sensors, relays, and pumps are turned on.
+
 **{Data Acquisition}** - State 3 of the experimental process where the coagulant pump is working and the increment function would increase its value each time when we switch to this state. The data acquisition state usually set to be 2 hours, which is enough for the floc blanket to form.
+
 **{Flush}** - State 4 of the experimental process where the coagulant pump stop working, during this stage raw water would run through the system and flush out the floc blanket build in last data acquisition state, so that every data acquisition state would run with same original system condition.
 
 
 ### Set Points
 **{Turb target}** - This set point has the same value as our target influent turbidity, and would control the clay pump.
 **{pump control(clay)}** - use this to decide which pump should we control.
+
 **{Flush Time}** - Duration of the flush state.
+
 **{Data Acquisition Time}** - Duration of the data acquisition state.
+
 **{State to Increment}** - Tell the increment function when to increase its value, in this experiment, we use increment function to control coagulant pump speed.
+
 **{Slope}** - The slope of increment function.
+
 **{Intercept}** - The intercept of increment function.
+
 **{Max x}** - How many time would the increment function work during one circulation.
+
 **{coag pump control}** - use this to decide which coagulant pump should we control.
+
 **{coag pump property}** - Flow rate per revolution.
+
 **{balance}** - Variable with value returned by the electrical balance.
 
 ## Python Code
