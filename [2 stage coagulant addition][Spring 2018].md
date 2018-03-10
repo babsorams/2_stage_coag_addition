@@ -149,10 +149,14 @@ After describing a particular result, within a paragraph, go on to connect your 
 * If the data do not support your hypothesis, is there another hypothesis that describes your new data?
 
 ## Conclusions
-Explain what you have learned and how that influences your next steps. Why does what you discovered matter to AguaClara?
 
-Make sure that you defend your conclusions with facts and results.
+At this point, we fully understood the ProCoDA system and could use the increment function to carry on set of control experiments with fixed turbidity and different coagulant dosage. Also we had implemented an electronic balance which also connects to the ProCoDA system to track the mass change of coagulant over time. It could offer us data to confirm our ProCoDA code will guide the pump to add coagulant to the amount we calculate.
 
+Generally, we deduced that by using the current design of system, when the turbidity is relatively low, we will need more coagulant to reach the target effluent turbidity.In this experiment, our target effluent turbidity should be no more than 3 NTU, which is already expected with the standard Aguaclara system.
+
+The calculation of coagulant dosage and the component of clay-humic acid mixture could be done on python now, we transfered the original MathCAD base code and translated it into python.
+
+If we validate our 2 stage hypothesis, we could use this model to guide the dosage in water treatment plant and save the coagulant, cut down the operational cost.
 ## Future Work
 Describe your plan of action for the next several weeks of research. Detail the next steps for this team. How can AguaClara use what you discovered for future projects? Your suggestions for challenges for future teams are most welcome. Should research in this area continue?
 
