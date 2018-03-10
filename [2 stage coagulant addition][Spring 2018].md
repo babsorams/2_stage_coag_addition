@@ -57,6 +57,7 @@ The ProCoDA system can only control two pumps, and one of the coagulant pump had
 
 * Schematic (label parts)
 ![apparatus](image/ApparatusSketch.jpg)
+  Figure： Apparatus Diagram
 
 The way in which the apparatus worked was the following. To start with, clay, humic acid and water were added according to the calculation, into a 10L stock tank with a stir. This stock tank was connected to the clay pump, the pump speed would be control by ProCoDA system to maintain a relatively fixed influent turbidity. After that, mixture of humic acid and clay went through the first turbidity meter and influent turbidity of the raw water is measured.
 
@@ -68,10 +69,10 @@ Initially, we designed a method depending on whether the experiment require the 
 Then, the mixture continued on to the second chamber. This can be seen in the following image.
 
 * Image
-Figure: Current Apparatus Set-up
+
 ![apparatus](image/CurrentApparatus2.png)
 ![apparatus](image/CurrentApparatus.jpg)
-
+  Figure: Current Apparatus Set-up
 * Complications in construction
 It is kind of hard to make a perfect system without any leak, because many parts we used in apparatus fabrication is processed by ourself, for example the cut and the drilling, also the "tube stretch". So it required us to keep monitoring the behavior of our apparatus, and fix the problem whenever it occurs.
 
@@ -159,12 +160,13 @@ plt.show()
 
 
 
-Figure 1: one of the typical experiment we ran
+
 
 ![datalog](https://github.com/AguaClara/2_stage_coag_addition/blob/master/image/experiment%20data.png)
+  Figure 1: one of the typical experiment we ran
+In this plot we can see the increment function in ProCoDA worked well and increase the pump speed during the trial. However, we found that the effluent turbidity did not go down steadily as we expected. After analyzed the data we find that the pump speed was around the lower limit of the pump and I the past research we found that our pumps did not function well at low speed. So we revised our ProCoDA method file, increase the y intercept of our increment function so that we can start our circulation witha higher pump speed(start with 12rpm).
 
-In this plot
-After describing a particular result, within a paragraph, go on to connect your work to fundamental physics/chemistry/statics/fluid mechanics, or whatever field is appropriate. Analyze your results and compare with theoretical expectations; or, if you have not yet done the experiments, describe your expectations based on established knowledge. Include implications of your results. How will your results influence the design of AguaClara plants? If possible provide clear recommendations for design changes that should be adopted. Show your experimental data in a professional way using the following guidelines:
+We also ran a one stage experiment with the increment function varying the chemical dosage from zero to 1.5mg/L with 100 NTU target for the influent turbidity. We ran the system for 15 hours and collected the data from ProCoDa. We found that even though the increment function worked, our effluent turbidity fluctuated slightly; the maximum value was 6.5 and the minimum value was 5.5, so we wondered if the dosage of the chemical did increase as much as we expect in the calculation. Because, according to our previous work and calculations, the effluent turbidity should have a positive correlation with the chemical dosage of coagulant but right now it seemed like the dosage did not affect the effluent turbidity significantly.
 
 * **Did these results line up with expectations?**
 In this semster, up to now, we only did several trials of one stage addition. Our expectation for the one stage addtion is that the floc blanket can be found in our sedimentation tank and the effluent go down to a level that is desirable for the AguaClara filtration system. The effluent turbidity in several trials happened to be around 20NTU, we assumed that it was due to the limit time of our data acquisition state, namely, we did not give the system enough time to form the floc blanket, so we extend the duration of that state, from 3600 seconds to 4800.
