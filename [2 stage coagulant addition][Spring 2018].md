@@ -186,7 +186,7 @@ In the rest semester, we would keep running both one stage and two stage experim
 If we validate our 2 stage hypothesis, we could use this model to guide the dosage in water treatment plant and save the coagulant, cut down the operational cost.
 
 ## Future Work
-Describe your plan of action for the next several weeks of research. Detail the next steps for this team. How can AguaClara use what you discovered for future projects? Your suggestions for challenges for future teams are most welcome. Should research in this area continue?
+We have encountered several problems: the high pressure within the system, the leak caused by the poor connection. In next few weeks, we would fix those problems and begin to conduct our experiment. After discussed with Monroe, we suspected that the size of our first contact chamber is not enough for the HA and coag nanoparticles in the synthetic water to generate enough successful collision, so recalculation and test on the CC are also required.
 
 ## Bibliography
 Logan, B. E., Hermanowicz, S. W., & Parker,A. S. (1987). A Fundamental Model for Trickling Filter Process Design. Journal (Water Pollution Control Federation), 59(12), 1029–1042.
@@ -238,9 +238,7 @@ Another potential section could include a list of things that you need to check 
 Use this section to explain your method file. This could be broken up into several components as shown below:
 
 ### States
-Here, you should describe the function of each state in your method file, both in terms of its overall purpose and also in terms of the details that make it distinct from other states. For example:
-\begin{itemize}
-<<<<<<< HEAD
+describe the function of each state in method file
 ***I don't know why the template kept the format of Overleaf***
 
 **{OFF}** - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
@@ -253,8 +251,9 @@ Here, you should describe the function of each state in your method file, both i
 
 
 ### Set Points
-<<<<<<< HEAD
+
 **{Turb target}** - This set point has the same value as our target influent turbidity, and would control the clay pump.
+
 **{pump control(clay)}** - use this to decide which pump should we control.
 
 **{Flush Time}** - Duration of the flush state.
