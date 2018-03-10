@@ -251,14 +251,7 @@ Here, you should describe the function of each state in your method file, both i
 
 **{Flush}** - State 4 of the experimental process where the coagulant pump stop working, during this stage raw water would run through the system and flush out the floc blanket build in last data acquisition state, so that every data acquisition state would run with same original system condition.
 
-=======
-\item \underline{OFF} - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
->>>>>>> fbf5fa40cd4f524893523acb3ec20f2ef10e94fb
 
-\item \underline{OFF} - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
-\item \underline{ON} - ON state of ProCoDa. All sensors, relays, and pumps are turned on.
-\item \underline{Data Acquisition} - State 3 of the experimental process where the coagulant pump is working and the increment function would increase its value each time when we switch to this state. The data acquisition state usually set to be 2 hours, which is enough for the floc blanket to form.
-\end{itemize}
 ### Set Points
 <<<<<<< HEAD
 **{Turb target}** - This set point has the same value as our target influent turbidity, and would control the clay pump.
