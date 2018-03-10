@@ -135,10 +135,22 @@ Step 1.
 Step 1.
 
 ### Cleaning Procedure
-Step 1.
+Step 1. Turn off coagulant and clay pump;
+
+Step 2. Increase the rpm of tap water pump, let the clean water flow through the apparatus in a relvatively high velocity
+
+Step 3. Keep running the water pump until the floc blanket in the sedtank is wash out and there is no clog or clay in any tube.
+
+Step 4. Empty the clay and humic acid container and the coagulant tank.
+
+Step 5. Turn off the power.
 
 ## Experimental Checklist
-Another potential section could include a list of things that you need to check before running an experiment.
+* Check the direction of pumps
+* Check the control mode of pumps, we use EXT(stand for external control) when conduct the experiment.
+* Check is there any leak in the system, especially around the turbidty meter
+* Check the control mode of ProCoDA, it should be "automatically switch state" in stead of "manual lock in state"
+* Check is there any error in ProCoDA
 
 ## ProCoDA Method File
 Use this section to explain your method file. This could be broken up into several components as shown below:
@@ -146,14 +158,25 @@ Use this section to explain your method file. This could be broken up into sever
 ### States
 Here, you should describe the function of each state in your method file, both in terms of its overall purpose and also in terms of the details that make it distinct from other states. For example:
 \begin{itemize}
+***I don't know why the template kept the format of Overleaf***
+**{OFF}** - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
+**{ON}** - ON state of ProCoDa. All sensors, relays, and pumps are turned on.
+**{Data Acquisition}** - State 3 of the experimental process where the coagulant pump is working and the increment function would increase its value each time when we switch to this state. The data acquisition state usually set to be 2 hours, which is enough for the floc blanket to form.
+**{Flush}** - State 4 of the experimental process where the coagulant pump stop working, during this stage raw water would run through the system and flush out the floc blanket build in last data acquisition state, so that every data acquisition state would run with same original system condition.
 
-\item \underline{OFF} - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
-\item \underline{ON} - ON state of ProCoDa. All sensors, relays, and pumps are turned on.
-\item \underline{Data Acquisition} - State 3 of the experimental process where the coagulant pump is working and the increment function would increase its value each time when we switch to this state. The data acquisition state usually set to be 2 hours, which is enough for the floc blanket to form.
-\end{itemize}
 
 ### Set Points
-Here, you should list the set points used in your method file and explain their use as well as how each was calculated.
+**{Turb target}** - This set point has the same value as our target influent turbidity, and would control the clay pump.
+**{pump control(clay)}** - use this to decide which pump should we control.
+**{Flush Time}** - Duration of the flush state.
+**{Data Acquisition Time}** - Duration of the data acquisition state.
+**{State to Increment}** - Tell the increment function when to increase its value, in this experiment, we use increment function to control coagulant pump speed.
+**{Slope}** - The slope of increment function.
+**{Intercept}** - The intercept of increment function.
+**{Max x}** - How many time would the increment function work during one circulation.
+**{coag pump control}** - use this to decide which coagulant pump should we control.
+**{coag pump property}** - Flow rate per revolution.
+**{balance}** - Variable with value returned by the electrical balance.
 
 ## Python Code
 
@@ -172,7 +195,74 @@ $F$: force
 $u$, $w$: x-velocity, z-velocity components
 
 ```python
-# Comment
+# flow rate of the system
+V_sedimentation = 2*(u.mm/u.s)
+# i did not have the ID data of the 1 inch PVC pipe
+ID_pipe = 0.96*u.inch
+Area_pipe = 0.25*np.pi*(ID_pipe**2)
+Q_system = V_sedimentation*Area_pipe
+# output the value
+print('The flow rate of the system is', (ut.sig(Q_system.to(u.mL/u.s),3)))
+
+# desired conc of PAC per L of water in the system. (0.5-2.5mg/L)(normally fixed range)
+
+conc_PACL = 1.1*(u.mg/u.L)
+# conc_PACL = np.array[(0.0,0.5,1.0,1.5)]
+MassFlow_coag = conc_PACL*Q_system
+print('The mass flow of coagulant in the system is',ut.sig(MassFlow_coag.to(u.mg/u.s),3))
+
+# how many mL of lab concentration are added per L into the reservoir(adjustable)
+k_dilution = 3.13*(u.ml/u.l)
+
+# concentration in grams per L of lab solution(normally fixed value)
+conc_labsolution = 70.9*(u.g/u.L)
+
+conc_reservoir = conc_labsolution*k_dilution
+Q_reservoir = MassFlow_coag/conc_reservoir
+print('The volumetric flow rate of solution leaving the reservior \
+and entering the system to achieve desired final concentration',Q_reservoir.to(u.mL/u.s))
+
+V_reservoir = 1*u.L
+V_lab_solution = V_reservoir*conc_reservoir/conc_labsolution
+print('The volume of lab concentration solution we need to add into the reservoir is',ut.sig(V_lab_solution,3))
+
+# The flow pumped out of the pump per round(measured by experiment)
+Q_perRPM_coag1 = 0.00042*(u.ml/u.s)
+# Q_perRPM_coag2 = 0.0025*(u.ml/u.s)
+numRPM = Q_reservoir/Q_perRPM_coag1
+print('The pump should run with a speed of',numRPM.to(u.dimensionless))
+
+# water pump:
+QperRPM = ((52*u.ml/(20*u.rpm)))/(0.5*u.min)
+print('water pump',QperRPM.to(u.ml))
+# taget RPM
+#waterpump_speed = 60*Q_system/QperRPM
+#print(waterpump_speed.to(u.dimensionless))
+# clay pump control by ProCoDA
+# coag pump 1
+QperRPM_p1 = (1*u.ml/(10*u.rpm))/(4*u.min)
+print(QperRPM_p1.to(u.ml))
+# coag pump 2 # exp2: 10RPM 3ml 127s
+QperRPM_p2 = ((3*u.ml/(10*u.rpm)))/(110*u.s)
+print(QperRPM_p2.to(u.ml))
+
+# concentration of the clay
+turbidity_target = (100*u.NTU)
+print(ut.sig(turbidity_target.to(u.g/u.L),3))
+
+# concentration of the humic acid
+conc_HA = 10*(u.mg/u.L)
+print(conc_HA.to(u.g/u.L))
+
+# clay&HA in tank
+# the concentration of the solution in stock tank is K times concentrated than system requirement
+V_mixture = 5*u.L
+K_condense = 20
+clay_add = turbidity_target*K_condense*V_mixture
+HA_add = conc_HA*K_condense*V_mixture
+
+print("so we add",clay_add.to(u.g),"clay and ",HA_add.to(u.g),"humic acid into the system.")
+
 ```
 
 # Add/Delete/Change this Template as you see Fit
