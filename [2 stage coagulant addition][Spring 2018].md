@@ -77,6 +77,7 @@ Then, the mixture continued on to the second chamber. This can be seen in the fo
 It is kind of hard to make a perfect system without any leak, because many parts we used in apparatus fabrication is processed by ourself, for example the cut and the drilling, also the "tube stretch". So it required us to keep monitoring the behavior of our apparatus, and fix the problem whenever it occurs.
 
 * Summary: After the study of last semester and this semester, we came up with this current design. Due to the limit bench area, there is a lot of simplification in our apparatus set-up, but it did reflect the nature of the AguaClara water treatment plant. The next step of our experiment apparatus improvement is to reduce simplification, and recalculation on the size of contact chamber is also required.
+
 ### Procedure
 For one stage addition experiment, in every single circulation, the coag dosage is: 1.1-2.6mg/L, increase 7 times by using the increment function, in which values are derived based on those used by Yingda(Author of our reference thesis). We should add two more data point, one between 1-1.5, and the other between 1.5-2.0. Because usually we generate desirable effluent turbidity around that range, besides, we don't have to start from 0.5mg/L, for that value is too low to treat the raw water.
 
@@ -90,9 +91,7 @@ Two-stage coagulant addition experiment should base on the data we generate with
 Present an observation (results), then explain what happened (analysis).  Each paragraph should focus on one aspect of your results. In that same paragraph, you should interpret that result.  
 In other words, there should not be two distinct paragraphs, but instead one paragraph containing one result and the interpretation and analysis of this result. Here are some guiding questions for results and analysis:
 
-When describing your results, present your data, using the guidelines below:
-* What happened? What did you find?
-* Show your experimental data in a professional way.
+
 ```python
 import numpy as np
 import pandas as pd
@@ -158,11 +157,11 @@ plt.show()
 ```
 
 
-
-
+![datalog](https://github.com/AguaClara/2_stage_coag_addition/blob/master/image/100NTU.png)
+                       Figure: model result which guide our experiment
 
 ![datalog](https://github.com/AguaClara/2_stage_coag_addition/blob/master/image/experiment%20data.png)
-                       Figure 1: one of the typical experiment we ran
+                       Figure: one of the typical experiment we ran
   
 In this plot we can see the increment function in ProCoDA worked well and increase the pump speed during the trial. However, we found that the effluent turbidity did not go down steadily as we expected. After analyzed the data we find that the pump speed was around the lower limit of the pump and I the past research we found that our pumps did not function well at low speed. So we revised our ProCoDA method file, increase the y intercept of our increment function so that we can start our circulation witha higher pump speed(start with 12rpm).
 
