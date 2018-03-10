@@ -53,7 +53,7 @@ Below, some example sections are given. Sectioning the report is meant to keep s
 ### Experimental Apparatus
 Explain your apparatus setup using enough detail such that future teams can recreate your apparatus. Make sure to explain why you built it this way.
 * Design (calculations, constraints)
-The ProCoDA system can only control two pumps, and one of the coagulant pump had to be connected to the system, so we could not add humic acid and clay separately like some of other groups in the lab.
+The ProCoDA system can only control two pumps, and one of the coagulant pump had to be connected to the system, so we could not add humic acid and clay separately like some of other groups in the lab. 
 
 * Schematic (label parts)
 ![apparatus](image/ApparatusSketch.jpg)
@@ -68,14 +68,13 @@ Initially, we designed a method depending on whether the experiment require the 
 Then, the mixture continued on to the second chamber. This can be seen in the following image.
 
 * Image
-
+Figure: Current Apparatus Set-up
 ![apparatus](image/CurrentApparatus2.png)
 ![apparatus](image/CurrentApparatus.jpg)
-* Materials (dimensions, materials)
 
 * Complications in construction
+It is kind of hard to make a perfect system without any leak, because many parts we used in apparatus fabrication is processed by ourself, for example the cut and the drilling, also the "tube stretch". So it required us to keep monitoring the behavior of our apparatus, and fix the problem whenever it occurs.
 
-* If already constructed: write a brief summary of important constraints, include any revisions to apparatus, also reference the prior report where construction is described
 * Summary: After the study of last semester and this semester, we came up with this current design. Due to the limit bench area, there is a lot of simplification in our apparatus set-up, but it did reflect the nature of the AguaClara water treatment plant. The next step of our experiment apparatus improvement is to reduce simplification, and recalculation on the size of contact chamber is also required.
 ### Procedure
 For one stage addition experiment, in every single circulation, the coag dosage is: 1.1-2.6mg/L, increase 7 times by using the increment function, in which values are derived based on those used by Yingda(Author of our reference thesis). We should add two more data point, one between 1-1.5, and the other between 1.5-2.0. Because usually we generate desirable effluent turbidity around that range, besides, we don't have to start from 0.5mg/L, for that value is too low to treat the raw water.
