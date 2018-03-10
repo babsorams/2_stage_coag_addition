@@ -33,6 +33,8 @@ Humic acid is considered natural organic matter, and it is of the final componen
 
 ### Observations and a Geometric Explanation of the Effects of Humic Acid (HA) on Flocculation
   The general science behind flocculation can be understood by analysing the thesis of the observations and a geometric explanation of the effects of HA flocculation by Yingda Du. The thesis gives a clear layout of why we are using HA as the natural organic matter as well as the chemistry behind the creation of flocs. We are using HA as the exemplary compound to represent dissolved NOM because it is the most commonly found form of NOM in our surroundings. Clay is used to represent the colloidal solids. As NOM is easily found in our soil and water, it increases our need of coagulant to promote flocculation of dissolved particles in water.  Hence why in our model of the experiment we add humic acid and clay with the coagulant PaCl (polyaluminium chloride). However, there is a cut-off point as to how much coagulant we can add to the raw water for it to be beneficial in the removal of NOM. This observation shows that some NOM become increasingly uncooperative to being removed due to the increased presence of coagulant. Our understanding behind the lack of floc formation of NOM in the presence of increased coagulant addition is limited, yet it is an area of interest in determining the magnitude of the effect.
+
+
 Nevertheless, Yingda’s report focuses on the effect on coagulation of humic acid in the form of hydraulic flocculation, with the consideration of the following processes of filtration and sedimentation. Her research is crucial to our subteam as it provides us with a basis of how we should set up our own apparatus, as well as the physics behind the creation of flocs.
 
 ### Using PACl as neutralizer and coagulant aid
@@ -51,21 +53,30 @@ Below, some example sections are given. Sectioning the report is meant to keep s
 ### Experimental Apparatus
 Explain your apparatus setup using enough detail such that future teams can recreate your apparatus. Make sure to explain why you built it this way.
 * Design (calculations, constraints)
+The ProCoDA system can only control two pumps, and one of the coagulant pump had to be connected to the system, so we could not add humic acid and clay separately like some of other groups in the lab.
 
-  $\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
 * Schematic (label parts)
 ![apparatus](image/ApparatusSketch.jpg)
 
+The way in which the apparatus worked was the following. To start with, clay, humic acid and water were added according to the calculation, into a 10L stock tank with a stir. This stock tank was connected to the clay pump, the pump speed would be control by ProCoDA system to maintain a relatively fixed influent turbidity. After that, mixture of humic acid and clay went through the first turbidity meter and influent turbidity of the raw water is measured.
 
-* Image (from lab; label parts)
+Following this, the first dosage of coagulant was added right before the mixture entered the first contact chamber so when it entered the first contact chamber, all of the particles were stuck one with each other.
 
-![apparatus](image/100NTU.png)
+The second stream of coagulant was pumped into the system after the first contact chamber if we were running a two staged addition experiment.
+Initially, we designed a method depending on whether the experiment require the addition of the second coagulant dosage or not, a valve was put so that we could control the coagulant addition. However, it was discovered that better idea to do it in a different way: the valve was taken out and the first coagulant addition pump was connected to the second coagulant addition pump. In this way, if a one addition test was being carried out, the first pump would work providing the previously set coagulant amount. On the other hand, if a two stage test was being carried out, while the first pump was providing the same dosage as before, the second pump would subtract from that the amount required for the second dosage addition.
+
+Then, the mixture continued on to the second chamber. This can be seen in the following image.
+
+* Image
+
 ![apparatus](image/CurrentApparatus2.png)
 ![apparatus](image/CurrentApparatus.jpg)
 * Materials (dimensions, materials)
-* Complications in construction
-* If already constructed: write a brief summary of important constraints, include any revisions to apparatus, also reference the prior report where construction is described
 
+* Complications in construction
+
+* If already constructed: write a brief summary of important constraints, include any revisions to apparatus, also reference the prior report where construction is described
+* Summary: After the study of last semester and this semester, we came up with this current design. Due to the limit bench area, there is a lot of simplification in our apparatus set-up, but it did reflect the nature of the AguaClara water treatment plant. The next step of our experiment apparatus improvement is to reduce simplification, and recalculation on the size of contact chamber is also required.
 ### Procedure
 For one stage addition experiment, in every single circulation, the coag dosage is: 1.1-2.6mg/L, increase 7 times by using the increment function, in which values are derived based on those used by Yingda(Author of our reference thesis). We should add two more data point, one between 1-1.5, and the other between 1.5-2.0. Because usually we generate desirable effluent turbidity around that range, besides, we don't have to start from 0.5mg/L, for that value is too low to treat the raw water.
 
