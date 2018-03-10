@@ -156,8 +156,13 @@ plt.plot(coag, Data50NTU['0 mg/L'], 'r.', coag, Data50NTU['3 mg/L'], 'b.',
 
 plt.show()
 ```
-![datalog]()
+* datalog
+
+
+
 Figure 1: one of the typical experiment we ran
+
+![datalog](https://github.com/AguaClara/2_stage_coag_addition/blob/master/image/experiment%20data.png)
 
 In this plot
 After describing a particular result, within a paragraph, go on to connect your work to fundamental physics/chemistry/statics/fluid mechanics, or whatever field is appropriate. Analyze your results and compare with theoretical expectations; or, if you have not yet done the experiments, describe your expectations based on established knowledge. Include implications of your results. How will your results influence the design of AguaClara plants? If possible provide clear recommendations for design changes that should be adopted. Show your experimental data in a professional way using the following guidelines:
@@ -278,9 +283,7 @@ Here, you should describe the function of each state in your method file, both i
 **{balance}** - Variable with value returned by the electrical balance.
 
 
-=======
-Here, you should list the set points used in your method file and explain their use as well as how each was calculated.
->>>>>>> fbf5fa40cd4f524893523acb3ec20f2ef10e94fb
+
 
 ## Python Code
 
@@ -299,7 +302,44 @@ $F$: force
 $u$, $w$: x-velocity, z-velocity components
 
 ```python
-# Comment
+# flow rate of the system
+V_sedimentation = 2*(u.mm/u.s)
+# i did not have the ID data of the 1 inch PVC pipe
+ID_pipe = 0.96*u.inch
+Area_pipe = 0.25*np.pi*(ID_pipe**2)
+Q_system = V_sedimentation*Area_pipe
+# output the value
+
+# QUES: what is the relation of inlet water pump RPM w/ this value???
+
+print('The flow rate of the system is', (ut.sig(Q_system.to(u.mL/u.s),3)))
+# mass flow of coagulant
+
+# desired conc of PAC per L of water in the system. (0.5-2.5mg/L)(normally fixed range)
+
+conc_PACL = 1.1*(u.mg/u.L)
+# conc_PACL = np.array[(0.0,0.5,1.0,1.5)]
+MassFlow_coag = conc_PACL*Q_system
+print('The mass flow of coagulant in the system is',ut.sig(MassFlow_coag.to(u.mg/u.s),3))
+# how many mL of lab concentration are added per L into the reservoir(adjustable)
+k_dilution = 3.13*(u.ml/u.l)
+
+# concentration in grams per L of lab solution(normally fixed value)
+conc_labsolution = 70.9*(u.g/u.L)
+
+conc_reservoir = conc_labsolution*k_dilution
+Q_reservoir = MassFlow_coag/conc_reservoir
+print('The volumetric flow rate of solution leaving the reservior \
+and entering the system to achieve desired final concentration',Q_reservoir.to(u.mL/u.s))
+
+V_reservoir = 1*u.L
+V_lab_solution = V_reservoir*conc_reservoir/conc_labsolution
+print('The volume of lab concentration solution we need to add into the reservoir is',ut.sig(V_lab_solution,3))
+# The flow pumped out of the pump per round(measured by experiment)
+Q_perRPM_coag1 = 0.00042*(u.ml/u.s)
+# Q_perRPM_coag2 = 0.0025*(u.ml/u.s)
+numRPM = Q_reservoir/Q_perRPM_coag1
+print('The pump should run with a speed of',numRPM.to(u.dimensionless))
 ```
 
 # Add/Delete/Change this Template as you see Fit
