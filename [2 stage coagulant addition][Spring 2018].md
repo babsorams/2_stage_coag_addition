@@ -14,13 +14,16 @@ Please do not delete my comments. Address them in the report and I will check th
 **Previous work:** Last semester, our group designed and fabricated the experiment apparatus and conducted experiment for both 1 stage and 2 stages coagulant addition. Our data is not enough to come up with a grand conclusion, but it suggested that there might be trade-off when we switch from 1 stage to 2 stages. Besides, we also made some simplification to our system.
 
 <div class="alert alert-block alert-danger">
+To grader:
+
 What is the experiment apparatus?
-
+-Funny question, our apparatus did not change a lot, why should we reiterate it in our report?
 What does 1 stage and 2 stages coagulant addition do and what are their difference?
-
+-did you read the report below carefully? 
 What were the Conclusions? What are the trade-offs from the switch from 1 stage to 2 stage?
-
+- I accept
 What are simplications?
+- in the report below.
 </div>
 
 **Goals & Objectives:** This semester, our group focused on comparing 1 stage addition with 2 stage addition and carrying on the experiment with different influent turbidities, coagulant dosage, and humic acid concentration as well as trying to improve Yingda's coagulant dosage model. Besides, more insight on the particles bond mechanism, flocculation, and geometry of the contact chambers were needed. Eventually, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
@@ -44,13 +47,17 @@ Use full, complete sentences.
 
 The ideas in the final sentece are key to your work this semester and is understandable.
 
+Combine these four sections into one paragraph. An abstract needs to be cohesive and short/clear/concise. Keep it under 100 words. See the abstract description in the rubric. 
+
+
 Combine these four sections into one paragraph. An abstract needs to be cohesive and short/clear/concise. Keep it under 100 words. See the abstract description in the rubric.
+
 </div>
 
 
 ## Introduction
 
-The physical and chemical process in flocculation to the optimization of water treatment process, thus a predictive model that can describe the flocculation process is needed. However, in the past research of AguaClara project team, the model we built only consider the clay and coagulant in the system, it is does not replicate the real-life engineering application because NOM can be found in nearly every surface water resources and some of the groundwater resources and the presence of NOM can create a need for increased coagulant doses in drinking water treatment.
+The physical and chemical process in flocculation is critical to the optimization of water treatment process, thus a predictive model that can describe the flocculation process is needed. However, in the past research of AguaClara project team, the model we built only consider the clay and coagulant in the system, it is does not replicate the real-life engineering application because NOM can be found in nearly every surface water resources and some of the groundwater resources and the presence of NOM can create a need for increased coagulant doses in drinking water treatment.
 
 <div class="alert alert-block alert-danger">
 First sentence is hard to understand.
