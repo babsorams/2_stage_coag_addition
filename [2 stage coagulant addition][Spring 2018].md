@@ -11,7 +11,7 @@ Please do not delete my comments. Address them in the report and I will check th
 </div>
 
 ## Abstract
-~~**Previous work:** Last semester, our group designed and fabricated the experiment apparatus and conducted experiment for both 1 stage and 2 stages coagulant addition. Our data is not enough to come up with a grand conclusion, but it suggested that there might be trade-off when we switch from 1 stage to 2 stages. Besides, we also made some simplification to our system.
+~~**Previous work:** Last semester, our group designed and fabricated the experiment apparatus and conducted experiment for both 1 stage and 2 stages coagulant addition. Our data is not enough to come up with a grand conclusion, but it suggested that there might be trade-off when we switch from 1 stage to 2 stages. Besides, we also made some simplification to our system.~~
 
 <div class="alert alert-block alert-danger">
 To grader:
@@ -26,7 +26,7 @@ What are simplications?
 
 </div>
 
-~~**Goals & Objectives:** This semester, our group focused on comparing 1 stage addition with 2 stage addition and carrying on the experiment with different influent turbidities, coagulant dosage, and humic acid concentration as well as trying to improve Yingda's coagulant dosage model. Besides, more insight on the particles bond mechanism, flocculation, and geometry of the contact chambers were needed. Eventually, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
+~~**Goals & Objectives:** This semester, our group focused on comparing 1 stage addition with 2 stage addition and carrying on the experiment with different influent turbidities, coagulant dosage, and humic acid concentration as well as trying to improve Yingda's coagulant dosage model. Besides, more insight on the particles bond mechanism, flocculation, and geometry of the contact chambers were needed. Eventually, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.~~
 
 <div class="alert alert-block alert-danger">
 Who is Yingda?
@@ -40,7 +40,7 @@ What is 1 stage vs. 2 stage addition? What are you adding?
 this section is much better than the first two = better focus
 </div>
 
-~~**Future work:** We have encountered several problems: the high pressure within the system, the leak caused by the poor connection. In next few weeks, we would fix those problems and begin to conduct our experiment. After discussed with Monroe, we suspected that the size of our first contact chamber is not enough for the HA and coag nanoparticles in the synthetic water to generate enough successful collision, so recalculation and test on the CC are also required.
+~~**Future work:** We have encountered several problems: the high pressure within the system, the leak caused by the poor connection. In next few weeks, we would fix those problems and begin to conduct our experiment. After discussed with Monroe, we suspected that the size of our first contact chamber is not enough for the HA and coag nanoparticles in the synthetic water to generate enough successful collision, so recalculation and test on the CC are also required.~~
 
 <div class="alert alert-block alert-danger">
 Use full, complete sentences.
