@@ -3,6 +3,10 @@
 #### March 1, 2018
 
 <div class="alert alert-block alert-danger">
+Why is the title not capitalized?
+</div>
+
+<div class="alert alert-block alert-danger">
 Please do not delete my comments. Address them in the report and I will check them on the next submission. If you disagree with any of the comments, add your own comment under mine.
 </div>
 
