@@ -1,4 +1,4 @@
-# 2 stage coagulant addition, Spring 2018
+# 2 Stage Coagulant Addition, Spring 2018
 #### Barbara Oramah, Ching Pang，Yuhao Du
 #### March 1, 2018
 
@@ -17,13 +17,13 @@ Please do not delete my comments. Address them in the report and I will check th
 To grader:
 
 What is the experiment apparatus?
--Funny question, our apparatus did not change a lot, why should we reiterate it in our report?
+
 What does 1 stage and 2 stages coagulant addition do and what are their difference?
--did you read the report below carefully? 
+
 What were the Conclusions? What are the trade-offs from the switch from 1 stage to 2 stage?
-- I accept
+
 What are simplications?
-- in the report below.
+
 </div>
 
 **Goals & Objectives:** This semester, our group focused on comparing 1 stage addition with 2 stage addition and carrying on the experiment with different influent turbidities, coagulant dosage, and humic acid concentration as well as trying to improve Yingda's coagulant dosage model. Besides, more insight on the particles bond mechanism, flocculation, and geometry of the contact chambers were needed. Eventually, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
