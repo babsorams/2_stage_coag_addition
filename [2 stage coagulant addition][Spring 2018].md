@@ -11,7 +11,7 @@ Please do not delete my comments. Address them in the report and I will check th
 </div>
 
 ## Abstract
-**Previous work:** Last semester, our group designed and fabricated the experiment apparatus and conducted experiment for both 1 stage and 2 stages coagulant addition. Our data is not enough to come up with a grand conclusion, but it suggested that there might be trade-off when we switch from 1 stage to 2 stages. Besides, we also made some simplification to our system.
+~~**Previous work:** Last semester, our group designed and fabricated the experiment apparatus and conducted experiment for both 1 stage and 2 stages coagulant addition. Our data is not enough to come up with a grand conclusion, but it suggested that there might be trade-off when we switch from 1 stage to 2 stages. Besides, we also made some simplification to our system.
 
 <div class="alert alert-block alert-danger">
 To grader:
@@ -26,7 +26,7 @@ What are simplications?
 
 </div>
 
-**Goals & Objectives:** This semester, our group focused on comparing 1 stage addition with 2 stage addition and carrying on the experiment with different influent turbidities, coagulant dosage, and humic acid concentration as well as trying to improve Yingda's coagulant dosage model. Besides, more insight on the particles bond mechanism, flocculation, and geometry of the contact chambers were needed. Eventually, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
+~~**Goals & Objectives:** This semester, our group focused on comparing 1 stage addition with 2 stage addition and carrying on the experiment with different influent turbidities, coagulant dosage, and humic acid concentration as well as trying to improve Yingda's coagulant dosage model. Besides, more insight on the particles bond mechanism, flocculation, and geometry of the contact chambers were needed. Eventually, we will try to close the debate of 1 stage vs 2 stage, come up with a conclusion and generate enough data to support it.
 
 <div class="alert alert-block alert-danger">
 Who is Yingda?
@@ -34,13 +34,13 @@ Who is Yingda?
 What is 1 stage vs. 2 stage addition? What are you adding?
 </div>
 
-**What we have accomplished:** Up to now we have completed the literature review, and working on apparatus set up. The research was based on Yingda's thesis, who studied the effect of humic acid on the coagulant dosing model. Based on the bonding mechanism, it could be hypothesized that two-stage coagulant addition would increase the removal efficiency of particles while maintaining the coagulant dosage.
+~~**What we have accomplished:** Up to now we have completed the literature review, and working on apparatus set up. The research was based on Yingda's thesis, who studied the effect of humic acid on the coagulant dosing model. Based on the bonding mechanism, it could be hypothesized that two-stage coagulant addition would increase the removal efficiency of particles while maintaining the coagulant dosage.
 
 <div class="alert alert-block alert-danger">
 this section is much better than the first two = better focus
 </div>
 
-**Future work:** We have encountered several problems: the high pressure within the system, the leak caused by the poor connection. In next few weeks, we would fix those problems and begin to conduct our experiment. After discussed with Monroe, we suspected that the size of our first contact chamber is not enough for the HA and coag nanoparticles in the synthetic water to generate enough successful collision, so recalculation and test on the CC are also required.
+~~**Future work:** We have encountered several problems: the high pressure within the system, the leak caused by the poor connection. In next few weeks, we would fix those problems and begin to conduct our experiment. After discussed with Monroe, we suspected that the size of our first contact chamber is not enough for the HA and coag nanoparticles in the synthetic water to generate enough successful collision, so recalculation and test on the CC are also required.
 
 <div class="alert alert-block alert-danger">
 Use full, complete sentences.
@@ -51,6 +51,8 @@ Combine these four sections into one paragraph. An abstract needs to be cohesive
 
 
 Combine these four sections into one paragraph. An abstract needs to be cohesive and short/clear/concise. Keep it under 100 words. See the abstract description in the rubric.
+
+**Up-to-date abstract:** In the past research, AguaClara project team studied the effect of humic acid, clay and PAC coagulant on flocculation, a predictive model was built as well. Based on the result of the model and the study of bonding mechanism, it could be hypothesized that two-stage coagulant addition, namely a separate coagulant addition, would increase the removal efficiency of particles while maintaining the coagulant dosage. Briefly speaking, during the first stage, coagulant was added to offset the effect of humic acid in the water, and the second stream of coagulant can aggregate clay, nano-aggregate form in the first stage and a few small particles to form big flocs. Last semester, our group designed and fabricated the experimental apparatus which is kept in this semester, and conducted experiment for both one stage and two stage coagulant addition to validate our hypothesis. This semester, our group will keep generating experimental data and try to close the debate of one stage versus two stage.
 
 </div>
 
