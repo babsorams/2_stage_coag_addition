@@ -34,7 +34,7 @@ What is 1 stage vs. 2 stage addition? What are you adding?
 **What we have accomplished:** Up to now we have completed the literature review, and working on apparatus set up. The research was based on Yingda's thesis, who studied the effect of humic acid on the coagulant dosing model. Based on the bonding mechanism, it could be hypothesized that two-stage coagulant addition would increase the removal efficiency of particles while maintaining the coagulant dosage.
 
 <div class="alert alert-block alert-danger">
-this section is much better than the first two = better focud
+this section is much better than the first two = better focus
 </div>
 
 **Future work:** We have encountered several problems: the high pressure within the system, the leak caused by the poor connection. In next few weeks, we would fix those problems and begin to conduct our experiment. After discussed with Monroe, we suspected that the size of our first contact chamber is not enough for the HA and coag nanoparticles in the synthetic water to generate enough successful collision, so recalculation and test on the CC are also required.
@@ -42,7 +42,7 @@ this section is much better than the first two = better focud
 <div class="alert alert-block alert-danger">
 Use full, complete sentences.
 
-The ideas in the final sentece are key to your work this semester and is understandable. I know English is not the first language of some team members. We can work on this throughout the semester!
+The ideas in the final sentece are key to your work this semester and is understandable.
 
 Combine these four sections into one paragraph. An abstract needs to be cohesive and short/clear/concise. Keep it under 100 words. See the abstract description in the rubric.
 </div>
@@ -102,8 +102,6 @@ Do an indepth review and focus on technical writing.
   The general science behind flocculation can be understood by analyzing the thesis of the observations and a geometric explanation of the effects of HA flocculation by Yingda Du. The thesis gives a clear layout of why we are using HA as the natural organic matter as well as the chemistry behind the creation of flocs. We are using HA as the exemplary compound to represent dissolved NOM because it is the most commonly found form of NOM in our surroundings. Clay is used to represent the colloidal solids. As NOM is easily found in our soil and water, it increases our need of coagulant to promote flocculation of dissolved particles in water.  Hence why in our model of the experiment we add humic acid and clay with the coagulant PaCl (polyaluminium chloride). However, there is a cut-off point as to how much coagulant we can add to the raw water for it to be beneficial in the removal of NOM. This observation shows that some NOM becomes increasingly uncooperative to being removed due to the increased presence of coagulant. Our understanding of the lack of floc formation in the presence of increased coagulant addition is limited, yet it is an area of interest in determining the magnitude of the effect.
 
   <div class="alert alert-block alert-danger">
-  Define HA like humic acid (HA)
-
   Repetitive information leads me tobelieve that this report was not checked over before submission.
 
   How does NOM become increasingly uncooperative to being removed due to increase presence of increased coagulant?
@@ -150,9 +148,7 @@ What is attachment efficiency for the hydraulic Flocculation
 
 Where are these results coming from? Source?
 
-What is a flocs
-
-Why is two-stage for efficiently
+Why is two-stage more efficiently
 
 Combine all these above sections into one lit review/previous work without all the separate headers.
 
