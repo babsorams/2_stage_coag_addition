@@ -47,7 +47,7 @@ Use full, complete sentences.
 
 The ideas in the final sentece are key to your work this semester and is understandable.
 
-Combine these four sections into one paragraph. An abstract needs to be cohesive and short/clear/concise. Keep it under 100 words. See the abstract description in the rubric. 
+Combine these four sections into one paragraph. An abstract needs to be cohesive and short/clear/concise. Keep it under 100 words. See the abstract description in the rubric.
 
 
 **Up-to-date abstract:** In the past research, AguaClara project team studied the effect of humic acid, clay and PAC coagulant on flocculation, a predictive model was built. Based on the modelling result and the study of bonding mechanism, it could be hypothesized that two-stage coagulant addition, namely a separate coagulant addition, would increase the removal efficiency of particles while maintaining the coagulant dosage. Briefly speaking, during the first stage, coagulant was added to offset the effect of humic acid in water, then the second stream of coagulant can aggregate clay, nano-aggregate forms in the first stage and a few small particles to form big flocs. Last semester, our group designed and fabricated the experimental apparatus which is kept in this semester, and conducted experiment for both one stage and two stage coagulant addition to validate our hypothesis. This semester, our group will keep generating experimental data to compare the efficiency of different coagulant addition method and try to close the debate of one stage versus two stage.
@@ -56,7 +56,7 @@ Combine these four sections into one paragraph. An abstract needs to be cohesive
 
 
 ## Introduction
-**Grading rubric** 
+**Grading rubric**
 State your theory and hypothesis
 Explain your experiment / process and why you performed this experiment
 Explain why your work is important (Explain the context of your team’s work in AguaClara and the world)
@@ -299,7 +299,7 @@ Are the current simplifications justified? Is the data you are getting reliable?
 </div>
 
 ### Procedure
-For one stage addition experiment, in every single circulation, the coag dosage is 1.1-2.6mg/L, which was increased 7 times by using the increment function, a function built in . Two more data point was added on the basis of past experiment, one between 1-1.5mg/L, and the other between 1.5-2.0mg/L, because it was found that desirable effluent turbidity usually generated around that range of coagulant concentration. Besides, according to the previous data, 0.5mg/L and 1mg/L coagulant is insufficient to effectively reduce the turbidity of the synthetic water. 
+For one stage addition experiment, in every single circulation, the coag dosage is 1.1-2.6mg/L, which was increased 7 times by using the increment function, a function built in . Two more data point was added on the basis of past experiment, one between 1-1.5mg/L, and the other between 1.5-2.0mg/L, because it was found that desirable effluent turbidity usually generated around that range of coagulant concentration. Besides, according to the previous data, 0.5mg/L and 1mg/L coagulant is insufficient to effectively reduce the turbidity of the synthetic water.
 
 <div class="alert alert-block alert-danger">
 coag is informal, use coagulant Instead
@@ -491,7 +491,7 @@ I don't understand the point of the attention section.
 </div>
 
 ### Experiment
-**Step 1.** Make sure the stocks are filled. One stock will have a diluted solution of PAC and the other will have a solution of water, clay, and humic acid. The concentration depends on experiment objectives and can be calculated by using the Python code below. 
+**Step 1.** Make sure the stocks are filled. One stock will have a diluted solution of PAC and the other will have a solution of water, clay, and humic acid. The concentration depends on experiment objectives and can be calculated by using the Python code below.
 
 
 **Step 2.** Once the solution is prepared, open the water and wastewater valves, turbidimeters, and let the apparatus completely filled with water, the experiment is now ready to run.
@@ -513,14 +513,14 @@ Where can I get info on making clay stocks?
 
 ### Cleaning Procedure
  Once the experiment is done, we want to completely wash out the apparatus so it will be ready for the next experiment.
- 
+
 **Step 1.** Turn off the clay and coagulant pump while let the tap water pump run at a relative high speed.
 
 **Step 2.** Remove entire apparatus from wall (recirculator \& tube settler) and throughly wash it out, then reattach it back to the wall.
 
 **Step 3.** Wash out the Flocculator by unplugging the connection between the the outflow tube from the influent turbidimeter and the flocculator, and plug in tubing from the nearby sink to wash out the flocculator. Make sure there is a bucket at the end of the flocculator that will collect the water.
 
-**Step 4.** Clean the influent and effluent turbidimeter. Make sure to turn on the Bypass channel first! First, open the bypass valve. Second, pinch the black outflow tube. 
+**Step 4.** Clean the influent and effluent turbidimeter. Make sure to turn on the Bypass channel first! First, open the bypass valve. Second, pinch the black outflow tube.
 
 **Step 5.** Remove and wash out the vials from both turbidimeters. Refill the vials with clean water, then put back into the turbidimeters. Use Kimtech wipes to clean the glass throughly.
 
@@ -611,44 +611,74 @@ Good checklist
  $u$, $w$: x-velocity, z-velocity components
 
  ```python
- # flow rate of the system
- V_sedimentation = 2*(u.mm/u.s)
- # i did not have the ID data of the 1 inch PVC pipe
- ID_pipe = 0.96*u.inch
- Area_pipe = 0.25*np.pi*(ID_pipe**2)
- Q_system = V_sedimentation*Area_pipe
- # output the value
+ # calculate the flow rate of the system
+V_sedimentation = 2*(u.mm/u.s)
+ID_pipe = 0.96*u.inch
+Area_pipe = 0.25*np.pi*(ID_pipe**2)
+Q_system = V_sedimentation*Area_pipe
 
- # QUES: what is the relation of inlet water pump RPM w/ this value???
+print('The flow rate of the system is', (ut.sig(Q_system.to(u.mL/u.s),3)))
 
- print('The flow rate of the system is', (ut.sig(Q_system.to(u.mL/u.s),3)))
- # mass flow of coagulant
+# mass flow of coagulant
+# desired conc of PAC per L of water in the system. (0.5-2.5mg/L)(normally fixed range)
 
- # desired conc of PAC per L of water in the system. (0.5-2.5mg/L)(normally fixed range)
+conc_PACL = 2*(u.mg/u.L)
+MassFlow_coag = conc_PACL*Q_system
 
- conc_PACL = 1.1*(u.mg/u.L)
- # conc_PACL = np.array[(0.0,0.5,1.0,1.5)]
- MassFlow_coag = conc_PACL*Q_system
- print('The mass flow of coagulant in the system is',ut.sig(MassFlow_coag.to(u.mg/u.s),3))
- # how many mL of lab concentration are added per L into the reservoir(adjustable)
- k_dilution = 3.13*(u.ml/u.l)
+print('The mass flow of coagulant in the system is',ut.sig(MassFlow_coag.to(u.mg/u.s),3))
 
- # concentration in grams per L of lab solution(normally fixed value)
- conc_labsolution = 70.9*(u.g/u.L)
+# how many mL of lab concentration are added per L into the reservoir(adjustable)
+k_dilution = 3.13*(u.ml/u.l)
 
- conc_reservoir = conc_labsolution*k_dilution
- Q_reservoir = MassFlow_coag/conc_reservoir
- print('The volumetric flow rate of solution leaving the reservior \
- and entering the system to achieve desired final concentration',Q_reservoir.to(u.mL/u.s))
+# concentration in grams per L of lab solution(normally fixed value)
+conc_labsolution = 70.9*(u.g/u.L)
+conc_tank = conc_labsolution*k_dilution
+Q_reservoir = MassFlow_coag/conc_tank
 
- V_reservoir = 1*u.L
- V_lab_solution = V_reservoir*conc_reservoir/conc_labsolution
- print('The volume of lab concentration solution we need to add into the reservoir is',ut.sig(V_lab_solution,3))
- # The flow pumped out of the pump per round(measured by experiment)
- Q_perRPM_coag1 = 0.00042*(u.ml/u.s)
- # Q_perRPM_coag2 = 0.0025*(u.ml/u.s)
- numRPM = Q_reservoir/Q_perRPM_coag1
- print('The pump should run with a speed of',numRPM.to(u.dimensionless))
+# print('The volumetric flow rate of solution leaving the tank\and entering the system to achieve desired final concentration',Q_reservoir.to(u.mL/u.s))
+V_reservoir = 2*u.L
+V_lab_solution = V_reservoir*conc_reservoir/conc_labsolution
+print('The volume of lab concentration solution we need to add into the tank is',ut.sig(V_lab_solution,3))
+# calculate the relevant pump speed, so that we can set our increment function
+
+# The flow pumped out of the pump per round(measured by experiment)
+# below are different pump properties(ie.ml of fluid come out of the pump to )
+#Q_perrev_coag1 = 0.00042*(u.ml/u.s)
+Q_perrev_coag1 = 0.0173*(u.ml/u.s)
+# Q_perrev_coag2 = 0.103*(u.ml/u.s)
+numRPM = Q_reservoir/Q_perrev_coag1*60
+print('The pump should run with a speed of',numRPM.to(u.dimensionless))
+
+# water pump:
+QperRPM = ((52*u.ml/(20*u.rpm)))/(0.5*u.min)
+print('water pump',QperRPM.to(u.ml))
+# taget RPM
+#waterpump_speed = 60*Q_system/QperRPM
+#print(waterpump_speed.to(u.dimensionless))
+# clay pump control by ProCoDA
+# coag pump 1
+QperRPM_p1 = (1*u.ml/(10*u.rpm))/(4*u.min)
+print(QperRPM_p1.to(u.ml))
+# coag pump 2 # exp2: 10RPM 3ml 127s
+QperRPM_p2 = ((3*u.ml/(10*u.rpm)))/(110*u.s)
+print(QperRPM_p2.to(u.ml))
+
+# concentration of the clay
+turbidity_target = (100*u.NTU)
+print(ut.sig(turbidity_target.to(u.g/u.L),3))
+
+# concentration of the humic acid
+conc_HA = 10*(u.mg/u.L)
+print(conc_HA.to(u.g/u.L))
+
+# clay&HA in tank
+# the concentration of the solution in stock tank is K times concentrated than system requirement
+V_mixture = 5*u.L
+K_condense = 20
+clay_add = turbidity_target*K_condense*V_mixture
+HA_add = conc_HA*K_condense*V_mixture
+
+print("so we add",clay_add.to(u.g),"clay and ",HA_add.to(u.g),"humic acid into the system.")
  ```
 
 <div class="alert alert-block alert-danger">
