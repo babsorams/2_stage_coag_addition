@@ -491,17 +491,19 @@ I don't understand the point of the attention section.
 </div>
 
 ### Experiment
-**Step 1.** Make sure the stocks are filled. One stock will have a diluted solution of coagulant and the other will have a solution of water, clay, and humic acid. The concentration depends on the experiment you want to run.
+**Step 1.** Make sure the stocks are filled. One stock will have a diluted solution of PAC and the other will have a solution of water, clay, and humic acid. The concentration depends on experiment objectives and can be calculated by using the Python code below. 
 
 
-**Step 2.** Once the stocks are ready, the water and wastewater valves are open, the turbidimeters open, and the apparatus completely filled with water, the experiment is now ready to run.
+**Step 2.** Once the solution is prepared, open the water and wastewater valves, turbidimeters, and let the apparatus completely filled with water, the experiment is now ready to run.
 
-**Step 3.** Be sure to turn on the wastewater pump, next to the effluent turbidimeter, to ensure that the flocs in the weir are transported to the wastewater line. We do not want the flocs to go through the effluent turbidimeter.
+**Step 3.** Be sure to turn on the sludge pump, a 1L/s pump next to the effluent turbidimeter, to ensure that sludge is drained to the wastewater line. We do not want the flocs to go through the effluent turbidimeter.
 
 
-**Step 4.** Go to ProCoDa and turn the state from OFF to ON to begin the clay pump so the influent turbidimeter will reach 100 NTU. Once the turbidimeter is steadily at 100 NTU, go back to ProCoDa and turn the stage from ON to Data acquisition state, which will turn on the coagulant pump.
-**Step 5.** The Data Acquisition state will go back and forth with the Flush state which is used for second stage addition. The data will be recorded on an excel file to be analyzed later.
-**Step 6.** Once the experiment was ran and the data collected, turn off ProCoDa and save the data. Proceed to the cleaning procedure when experimentation is finished.
+**Step 4.** Go to ProCoDa and turn the state from OFF to ON to turn on the clay pump so the influent turbidimeter will soon reach the target influent turbidity. Once the influent turbidity fluctuate around 100 NTU, go back to ProCoDa and turn the stage from ON to Data acquisition state, which will turn on the coagulant pump. Then switch the operational mode from "Mannual" to "Auto Switch".
+
+**Step 5.** The Data Acquisition state will go back and forth with the Flush state which is used to wash out the floc blanket. The data will be recorded on an excel file to be analyzed later.
+
+**Step 6.** Once the experiment was ran and the data collected, check the datalog and turn off ProCoDa. Proceed to the cleaning procedure when experimentation is finished.
 
 <div class="alert alert-block alert-danger">
 Check formatting and the technical writing.
@@ -511,15 +513,16 @@ Where can I get info on making clay stocks?
 
 ### Cleaning Procedure
  Once the experiment is done, we want to completely wash out the apparatus so it will be ready for the next experiment.
- **Step 1.** Turn off the clay and coagulant pump while let the tap water pump run at a relative high speed.
+ 
+**Step 1.** Turn off the clay and coagulant pump while let the tap water pump run at a relative high speed.
 
-**Step 2.** Remove entire apparatus from wall (recirculator \& tube settler) and throughly wash it out, then reattach it back to the wall
+**Step 2.** Remove entire apparatus from wall (recirculator \& tube settler) and throughly wash it out, then reattach it back to the wall.
 
 **Step 3.** Wash out the Flocculator by unplugging the connection between the the outflow tube from the influent turbidimeter and the flocculator, and plug in tubing from the nearby sink to wash out the flocculator. Make sure there is a bucket at the end of the flocculator that will collect the water.
 
-**Step 4.** Clean the influent and effluent turbidimeter. Make sure to turn on the Bypass channel first! First, open the bypass valve. Second, pinch the black outflow tube. Third, close the inflow valve.
+**Step 4.** Clean the influent and effluent turbidimeter. Make sure to turn on the Bypass channel first! First, open the bypass valve. Second, pinch the black outflow tube. 
 
-**Step 5.** Remove and wash out the vials from both turbidimeters. Refill the vials with clean water, then put back into the turbidimeters.Use Kim wipes to clean the glass throughly.
+**Step 5.** Remove and wash out the vials from both turbidimeters. Refill the vials with clean water, then put back into the turbidimeters. Use Kimtech wipes to clean the glass throughly.
 
 <div class="alert alert-block alert-danger">
 Do you mean kimtech wipes?
@@ -536,15 +539,15 @@ Where can I find info on how to set-up the apparatus?
 ## Experimental Checklist
 Before running the experiment, we check apparatus following steps below:
 
-First, we open the influent and effluent turbidity meter and check whether the inside glass container is clean;
+**Step 1.** Turn on the influent and effluent turbidity meter and check whether the inside glass container is clean;
 
-Second, before reassemble the turbidity meter again, we turn on only the water pump and let tap water run through the system to see if their is any leak in the system, especially near the turbidity meter, in case water would flow to interior of the meter and cause damage to the apparatus;
+**Step 2.** Before reassemble the turbidity meter again, we turn on only the water pump and let tap water run through the system to see if their is any leak in the system, especially near the turbidity meter, in case water would flow to interior of the meter and cause damage to the apparatus;
 
-Third,  turn on all pumps and set them with a tiny RPM value, then check if pumps run in the right direction;
+**Step 3.** Turn on all pumps and set them with a tiny RPM value, then check if pumps run in the right direction;
 
-Fourth, go to the "edit rules" part of the ProCoDA, check the parameter of increment function, make sure those valve are set according to the calculation;
+**Step 4.** go to the "edit rules" part of the ProCoDA, check the parameter of increment function, make sure those valve are set according to the calculation;
 
-Fifth, and the last step, go the the "operation" part of ProCoDA, start the system with "Data Acquisition States" and make sure states would switch between one another automatically.
+**Step 5.** The last step, turn to "operation" part of ProCoDA, start the system with "Data Acquisition States" and make sure states would switch between one another automatically.
 
 <div class="alert alert-block alert-danger">
 Keep list formatting consistent with sections above.
@@ -553,15 +556,8 @@ Good checklist
 </div>
 
 ## ProCoDA Method File
-Use this section to explain your method file. This could be broken up into several components as shown below:
 
 ### States
-
-***I don't know why the template kept the format of Overleaf***
-
-<div class="alert alert-block alert-danger">
-What do you mean by this? Why did you not ask this question to someone before submission?
-</div>
 
 **{OFF}** - Resting state of ProCoDA. All sensors, relays, and pumps are turned off.
 
@@ -574,9 +570,9 @@ What do you mean by this? Why did you not ask this question to someone before su
 
 ### Set Points
 
-**{Turb target}** - This set point has the same value as our target influent turbidity, and would control the clay pump.
+**{Turb target}** - The value of our target influent turbidity, ProCoDA will control the clay pump to maintain the target influent turbidity.
 
-**{pump control(clay)}** - use this to decide which pump should we control.
+**{pump control(clay)}** - Use this set point to decide which pump should we control.
 
 **{Flush Time}** - Duration of the flush state.
 
@@ -590,7 +586,7 @@ What do you mean by this? Why did you not ask this question to someone before su
 
 **{Max x}** - How many time would the increment function work during one circulation.
 
-**{coag pump control}** - use this to decide which coagulant pump should we control.
+**{coag pump control}** - Use this set poiont to decide which coagulant pump should we control.
 
 **{coag pump property}** - Flow rate per revolution.
 
