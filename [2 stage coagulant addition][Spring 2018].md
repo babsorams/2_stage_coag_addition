@@ -56,10 +56,24 @@ Combine these four sections into one paragraph. An abstract needs to be cohesive
 
 
 ## Introduction
+**Grading rubric** 
+State your theory and hypothesis
+Explain your experiment / process and why you performed this experiment
+Explain why your work is important (Explain the context of your team’s work in AguaClara and the world)
+Rating of 5 (Strong):
+Presents a clear and concise lead-in to the remainder of the report
+Appropriate background information (including references) presented in organized fashion
+Problem is well developed.  Hypotheses, if appropriate, are clearly stated  
+Outline of the remaining report present and easily understandable
 
 **the logic**: first give the background of NOM effect on flocculation and point out the problem: NOM reduce flocculation efficiency. then explain why we want to study its effect-want to optimize operation condition. then discuss what we learned in the past research-mainly the model and its result. then develop the hypothesis-two stage can save coagulant. after that our experiment test the particle removal efficiency of both 1stage and 2stage addition. so that we can validate our hypothesis: whether 2stage is more efficient. then out line, in the following report we would break down our experiment, from theoretical basis to apparatus design, then experiment process, finally we would analyse the data we generate and offer some conclusion.
 
-The physical and chemical process in flocculation is critical to the optimization of water treatment process, thus a predictive model that can describe the flocculation process is needed. However, the model built in the past research of AguaClara project team is problematic because it only considered the clay and coagulant in the water, and fail to take natrual organic matters into consideration. The natrual organic matters, NOM, is ubiquitous in natrual water system, it is matter composed of organic compounds that has come from the remains of organisms such as plants and animals and their waste products .[1]["Natural Organic Matter," GreenFacts, 22 Apr, 2007]  Flocculation is among the most applied processes for water and wastewater treatment. The application of flocculation to remove NOM from drinking water supplies was efficient and helped avoiding the formation of disinfection by products (DBPs).[2][Mika et al.,2018] Nonetheless, with the precense of NOM in water , the efficiency of flocculation was substantially reduced, hence the need to develop flocculation processes by optimizing the operating conditions (mainly the amount of coagulants).
+Flocculation is among the most applied processes for water and wastewater treatment, thoroughly understanding of the physical and chemical process in flocculation is critical to the optimization of water treatment process, thus a predictive model to describe the flocculation process is needed. However, the model built in the past research of AguaClara project team is problematic because it only considered the clay and coagulant in water, and fail to take natrual organic matters into consideration. The natrual organic matters, NOM, is ubiquitous in natrual water system, is matter composed of organic compounds that has come from the remains of organisms such as plants and animals and their waste products .[1]["Natural Organic Matter," GreenFacts, 22 Apr, 2007]  The application of flocculation to remove NOM from drinking water supplies was efficient and helped avoiding the formation of disinfection by products (DBPs).[2][Mika et al.,2018] Nonetheless, with the precense of NOM in water, the efficiency of flocculation was substantially reduced. Hence in order to develop flocculation processes by optimizing the operating conditions (mainly the amount of coagulants), we have to study the effect of NOM on flocculation.
+
+~~In the past research, original model (only take coagulant and clay into account) have been extended by taking the effect of NOM on flocculation into consideration. ~~After studying the bonding mechanism between clay, humic acid, and coagulant, assumption was raised that the coagulant can be saved by adding them separately. Because it was assumed that after stage 1, all coagulant would be coated by humic acid, thus the coagulant adds in stage 2 can merely function as an agglomerant then achieved better performance in flocculation process and the aggregation process. If the coagulant dosage can be guided by a predictive model, operating conditions of flocculation process can be optimized and coagulant will be used more efficiently. Saving the coagulant will in turn reduce operational cost of water treatment plants. Since AguaClara is an engineering project team focuses on sustainable drinking water supply in developing region, cost is always our main concern.
+
+In this report, findings in literature review and our group's previous work is discussed, following that is the experiment design and apparatus set-up of our team in this semester. Findings and conclusion based on our experiment data and analysis is describded at the end of main body. Details in experimental operation such as ProCoDA setting, chemical dosage calculation, experiment process can be found after the main text.
+
 
 <div class="alert alert-block alert-danger">
 
@@ -67,7 +81,7 @@ Define NOM
 
 </div>
 
-In the past research, original model (only take coagulant and clay into account) have been extended by taking the effect of NOM on flocculation into consideration. After studying the bond mechanism between clay, humic acid, and coagulant, assumption was raised that the coagulant can be saved by adding coagulant separately. Because it was assumed that after stage 1, all coagulant would be coated by humic acid, thus the coagulant adds in stage 2 could merely function as an agglomerant then achieved better performance in flocculation process and the aggregation process. After the model was built,  operating conditions of flocculation process can be optimize by using the coagulant more efficiently and thus cutting down the operational cost. Since AguaClara is an engineering project team with limited resources, cost should always be taken into account.
+
 
 <div class="alert alert-block alert-danger">
 Good content detailing the importance, but issues with technical writing.
