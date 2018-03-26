@@ -285,7 +285,7 @@ Are the current simplifications justified? Is the data you are getting reliable?
 </div>
 
 ### Procedure
-For one stage addition experiment, in every single circulation, the coag dosage is: 1.1-2.6mg/L, which was increased 7 times using the increment function, in which the values were derived based on those used by Yingda (Author of our reference thesis). We should add two more data point, one between 1-1.5, and the other between 1.5-2.0. Because in the past we generated desirable effluent turbidity around that range, besides, we don't have to start from 0.5mg/L, for that value is too low to treat the raw water.
+For one stage addition experiment, in every single circulation, the coag dosage is 1.1-2.6mg/L, which was increased 7 times by using the increment function, a function built in . Two more data point was added on the basis of past experiment, one between 1-1.5mg/L, and the other between 1.5-2.0mg/L, because it was found that desirable effluent turbidity usually generated around that range of coagulant concentration. Besides, according to the previous data, 0.5mg/L and 1mg/L coagulant is insufficient to effectively reduce the turbidity of the synthetic water. 
 
 <div class="alert alert-block alert-danger">
 coag is informal, use coagulant Instead
